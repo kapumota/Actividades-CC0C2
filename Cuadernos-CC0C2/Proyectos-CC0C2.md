@@ -1,3 +1,26 @@
+## Lista de proyecto de curso
+
+Estructura del repositorio: Cada estudiante debe crear un repositorio que contenga 3 carpetas principales, una para cada entrega gradual del proyecto.
+
+Las carpetas deben nombrarse de la siguiente manera:
+
+- Entrega_1 (para el primer entregable)
+- Entrega_2 (para el segundo entregable)
+- Entrega_3 (para el tercer y último entregable)
+
+Contenido de cada carpeta: En cada una de estas carpetas, debe reflejarse el avance del proyecto correspondiente a la fecha de entrega. Los cambios realizados entre entregas deben documentarse claramente en los archivos de la carpeta.
+
+Actualización de cambios graduales: Asegúrense de que cada entrega muestre los avances y mejoras hechas desde la entrega anterior. Utilicen el control de versiones (commits) para registrar cada cambio significativo.
+
+Plazo de entrega:
+
+Entrega 1: hasta el 30 de noviembre
+Entrega 2: hasta el 7 de diciembre
+Entrega 3 (final): hasta el 14 de diciembre
+
+Documentación de cambios: Incluir en cada carpeta un archivo README.md que explique los cambios realizados en esa etapa y cómo estos avances reflejan los conceptos enseñados en clase.
+
+---
 
 ### **Proyecto 1: Ajustar finamente un LLM con PPO vs DPO vs ORPO utilizando el paquete PEFT**
 
@@ -664,10 +687,8 @@ Los dispositivos edge, como sensores inteligentes, dispositivos IoT y sistemas e
 
 Optimizar un modelo Transformer para dispositivos edge permite llevar capacidades avanzadas de inteligencia artificial a entornos donde antes no era posible, habilitando aplicaciones como análisis en tiempo real, detección de anomalías, reconocimiento de patrones y más, directamente en el dispositivo. Esto reduce la necesidad de comunicación con servidores remotos, mejora la latencia y protege la privacidad de los datos. El proyecto también contribuirá al avance de técnicas de optimización de modelos y su aplicación práctica en entornos con recursos limitados.
 
-Claro, a continuación presento las rúbricas para cada uno de los proyectos. Cada proyecto incluye las fechas de los tres entregables con sus respectivas exposiciones. Las rúbricas están diseñadas sobre 8 puntos para el trabajo y 12 puntos para la exposición. Se presentan en tablas en formato markdown para facilitar su lectura.
-
 ---
-### Rúbricas
+## Rúbricas
 
 ## **Proyecto 1: Ajustar finamente un LLM con PPO vs DPO vs ORPO utilizando el paquete PEFT**
 
