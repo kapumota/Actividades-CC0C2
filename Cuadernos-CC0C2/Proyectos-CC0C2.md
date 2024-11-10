@@ -1,6 +1,6 @@
 ## Lista de proyecto de curso
 
-Estructura del repositorio: Cada estudiante debe crear un repositorio que contenga 3 carpetas principales, una para cada entrega gradual del proyecto.
+**Estructura del repositorio**: Cada estudiante debe crear un repositorio que contenga 3 carpetas principales, una para cada entrega gradual del proyecto.
 
 Las carpetas deben nombrarse de la siguiente manera:
 
@@ -8,17 +8,17 @@ Las carpetas deben nombrarse de la siguiente manera:
 - Entrega_2 (para el segundo entregable)
 - Entrega_3 (para el tercer y último entregable)
 
-Contenido de cada carpeta: En cada una de estas carpetas, debe reflejarse el avance del proyecto correspondiente a la fecha de entrega. Los cambios realizados entre entregas deben documentarse claramente en los archivos de la carpeta.
+**Contenido de cada carpeta**: En cada una de estas carpetas, debe reflejarse el avance del proyecto correspondiente a la fecha de entrega. Los cambios realizados entre entregas deben documentarse claramente en los archivos de la carpeta.
 
-Actualización de cambios graduales: Asegúrense de que cada entrega muestre los avances y mejoras hechas desde la entrega anterior. Utilicen el control de versiones (commits) para registrar cada cambio significativo.
+**Actualización de cambios graduales**: Asegúrense de que cada entrega muestre los avances y mejoras hechas desde la entrega anterior. Utilicen el control de versiones (commits) para registrar cada cambio significativo.
 
-Plazo de entrega:
+**Plazo de entrega**:
 
-Entrega 1: hasta el 30 de noviembre
-Entrega 2: hasta el 7 de diciembre
-Entrega 3 (final): hasta el 14 de diciembre
+- Entrega 1: hasta el 30 de noviembre
+- Entrega 2: hasta el 7 de diciembre
+- Entrega 3 (final): hasta el 14 de diciembre
 
-Documentación de cambios: Incluir en cada carpeta un archivo README.md que explique los cambios realizados en esa etapa y cómo estos avances reflejan los conceptos enseñados en clase.
+**Documentación de cambios**: Incluir en cada carpeta un archivo README.md que explique los cambios realizados en esa etapa y cómo estos avances reflejan los conceptos enseñados en clase.
 
 ---
 
