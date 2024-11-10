@@ -664,3 +664,713 @@ Los dispositivos edge, como sensores inteligentes, dispositivos IoT y sistemas e
 
 Optimizar un modelo Transformer para dispositivos edge permite llevar capacidades avanzadas de inteligencia artificial a entornos donde antes no era posible, habilitando aplicaciones como análisis en tiempo real, detección de anomalías, reconocimiento de patrones y más, directamente en el dispositivo. Esto reduce la necesidad de comunicación con servidores remotos, mejora la latencia y protege la privacidad de los datos. El proyecto también contribuirá al avance de técnicas de optimización de modelos y su aplicación práctica en entornos con recursos limitados.
 
+Claro, a continuación presento las rúbricas para cada uno de los proyectos. Cada proyecto incluye las fechas de los tres entregables con sus respectivas exposiciones. Las rúbricas están diseñadas sobre 8 puntos para el trabajo y 12 puntos para la exposición. Se presentan en tablas en formato markdown para facilitar su lectura.
+
+---
+### Rúbricas
+
+## **Proyecto 1: Ajustar finamente un LLM con PPO vs DPO vs ORPO utilizando el paquete PEFT**
+
+### **Entregable 1 - Fecha: 30 de noviembre**
+
+**Trabajo (8 puntos)**
+
+| Criterio                                                   | Puntos |
+|------------------------------------------------------------|--------|
+| Preparación y configuración del entorno de desarrollo      | 2      |
+| Selección y justificación del conjunto de datos adecuado   | 2      |
+| Configuración inicial del LLM base para el ajuste fino     | 2      |
+| Documentación clara y detallada de los pasos realizados    | 2      |
+| **Total**                                                  | **8**  |
+
+**Exposición (12 puntos)**
+
+| Criterio                                                   | Puntos |
+|------------------------------------------------------------|--------|
+| Presentación clara de los objetivos del entregable         | 3      |
+| Explicación de la configuración del entorno y herramientas | 3      |
+| Uso de recursos visuales (diapositivas, gráficos)          | 3      |
+| Respuesta efectiva a preguntas y manejo del tiempo         | 3      |
+| **Total**                                                  | **12** |
+
+### **Entregable 2 - Fecha: 7 de diciembre**
+
+**Trabajo (8 puntos)**
+
+| Criterio                                                       | Puntos |
+|----------------------------------------------------------------|--------|
+| Implementación correcta de PPO, DPO y ORPO utilizando PEFT     | 3      |
+| Entrenamiento exitoso del LLM con cada método                  | 3      |
+| Registro y análisis de métricas de rendimiento                 | 2      |
+| **Total**                                                      | **8**  |
+
+**Exposición (12 puntos)**
+
+| Criterio                                                           | Puntos |
+|--------------------------------------------------------------------|--------|
+| Explicación detallada de cada método de optimización               | 4      |
+| Demostración de resultados intermedios y desafíos enfrentados      | 4      |
+| Claridad en la comunicación y uso de ejemplos prácticos            | 4      |
+| **Total**                                                          | **12** |
+
+### **Entregable 3 - Fecha: 14 de diciembre**
+
+**Trabajo (8 puntos)**
+
+| Criterio                                                        | Puntos |
+|-----------------------------------------------------------------|--------|
+| Evaluación exhaustiva del rendimiento de cada modelo ajustado   | 3      |
+| Análisis comparativo detallado entre PPO, DPO y ORPO            | 3      |
+| Informe final con conclusiones y recomendaciones                | 2      |
+| **Total**                                                       | **8**  |
+
+**Exposición (12 puntos)**
+
+| Criterio                                                             | Puntos |
+|----------------------------------------------------------------------|--------|
+| Presentación de resultados y hallazgos clave                         | 4      |
+| Análisis crítico y reflexión sobre el proceso y resultados           | 4      |
+| Calidad visual y estructuración de la presentación                   | 4      |
+| **Total**                                                            | **12** |
+
+---
+
+## **Proyecto 2: Crear una aplicación interactiva de chat que utiliza GPT para responder en tiempo real, con soporte para WebSockets**
+
+### **Entregable 1 - Fecha: 30 de noviembre**
+
+**Trabajo (8 puntos)**
+
+| Criterio                                                      | Puntos |
+|---------------------------------------------------------------|--------|
+| Desarrollo y configuración del backend del servidor           | 3      |
+| Integración exitosa con la API de GPT preentrenado            | 3      |
+| Implementación de endpoints básicos para el chat              | 2      |
+| **Total**                                                     | **8**  |
+
+**Exposición (12 puntos)**
+
+| Criterio                                                         | Puntos |
+|------------------------------------------------------------------|--------|
+| Descripción clara de la arquitectura del backend                 | 4      |
+| Demostración de funcionalidades implementadas                    | 4      |
+| Respuesta a preguntas técnicas y manejo del tiempo               | 4      |
+| **Total**                                                        | **12** |
+
+### **Entregable 2 - Fecha: 7 de diciembre**
+
+**Trabajo (8 puntos)**
+
+| Criterio                                                      | Puntos |
+|---------------------------------------------------------------|--------|
+| Desarrollo de la interfaz de usuario del chat                 | 3      |
+| Implementación efectiva de WebSockets para comunicación       | 3      |
+| Pruebas de interacción entre frontend y backend               | 2      |
+| **Total**                                                     | **8**  |
+
+**Exposición (12 puntos)**
+
+| Criterio                                                            | Puntos |
+|---------------------------------------------------------------------|--------|
+| Presentación del frontend y sus características                     | 4      |
+| Explicación del uso de WebSockets y su importancia                  | 4      |
+| Demostración en vivo de la aplicación en funcionamiento             | 4      |
+| **Total**                                                           | **12** |
+
+### **Entregable 3 - Fecha: 14 de diciembre**
+
+**Trabajo (8 puntos)**
+
+| Criterio                                                         | Puntos |
+|------------------------------------------------------------------|--------|
+| Optimización de la aplicación para rendimiento y escalabilidad   | 3      |
+| Implementación de medidas de seguridad y manejo de errores       | 3      |
+| Despliegue exitoso de la aplicación y documentación final        | 2      |
+| **Total**                                                        | **8**  |
+
+**Exposición (12 puntos)**
+
+| Criterio                                                              | Puntos |
+|-----------------------------------------------------------------------|--------|
+| Presentación de mejoras y optimizaciones realizadas                   | 4      |
+| Discusión sobre desafíos enfrentados y soluciones implementadas       | 4      |
+| Calidad general de la exposición y uso de recursos visuales           | 4      |
+| **Total**                                                             | **12** |
+
+---
+
+## **Proyecto 3: Entrenar y ajustar un LLM especializado en la clasificación de noticias por temas**
+
+### **Entregable 1 - Fecha: 30 de noviembre**
+
+**Trabajo (8 puntos)**
+
+| Criterio                                                          | Puntos |
+|-------------------------------------------------------------------|--------|
+| Recolección y preprocesamiento adecuado del conjunto de datos     | 3      |
+| Etiquetado correcto de las categorías temáticas                   | 3      |
+| Selección y justificación del modelo base (e.g., DistilBERT)      | 2      |
+| **Total**                                                         | **8**  |
+
+**Exposición (12 puntos)**
+
+| Criterio                                                          | Puntos |
+|-------------------------------------------------------------------|--------|
+| Explicación del proceso de recopilación y preparación de datos    | 4      |
+| Justificación de las decisiones tomadas en la selección del modelo| 4      |
+| Claridad en la presentación y respuesta a preguntas               | 4      |
+| **Total**                                                         | **12** |
+
+### **Entregable 2 - Fecha: 7 de diciembre**
+
+**Trabajo (8 puntos)**
+
+| Criterio                                                      | Puntos |
+|---------------------------------------------------------------|--------|
+| Configuración y ajuste fino del modelo para la tarea          | 3      |
+| Entrenamiento y validación del modelo con resultados iniciales| 3      |
+| Ajuste de hiperparámetros y mejoras implementadas             | 2      |
+| **Total**                                                     | **8**  |
+
+**Exposición (12 puntos)**
+
+| Criterio                                                             | Puntos |
+|----------------------------------------------------------------------|--------|
+| Presentación de la metodología de entrenamiento                      | 4      |
+| Análisis de resultados y discusión de mejoras                        | 4      |
+| Uso efectivo de gráficos y tablas para ilustrar puntos clave         | 4      |
+| **Total**                                                            | **12** |
+
+### **Entregable 3 - Fecha: 14 de diciembre**
+
+**Trabajo (8 puntos)**
+
+| Criterio                                                          | Puntos |
+|-------------------------------------------------------------------|--------|
+| Evaluación del modelo en conjunto de pruebas independiente        | 3      |
+| Desarrollo de interfaz o API funcional                            | 3      |
+| Documentación completa y propuestas de mejoras futuras            | 2      |
+| **Total**                                                         | **8**  |
+
+**Exposición (12 puntos)**
+
+| Criterio                                                             | Puntos |
+|----------------------------------------------------------------------|--------|
+| Demostración de la herramienta o API desarrollada                    | 4      |
+| Evaluación final y reflexión sobre el proyecto                       | 4      |
+| Calidad de la presentación y habilidad para comunicar ideas          | 4      |
+| **Total**                                                            | **12** |
+
+---
+
+## **Proyecto 4: Usar embeddings contextuales para generar recomendaciones de películas**
+
+### **Entregable 1 - Fecha: 30 de noviembre**
+
+**Trabajo (8 puntos)**
+
+| Criterio                                                             | Puntos |
+|----------------------------------------------------------------------|--------|
+| Creación y preprocesamiento del conjunto de datos de películas       | 3      |
+| Generación correcta de embeddings para descripciones                 | 3      |
+| Organización y almacenamiento eficiente de los embeddings            | 2      |
+| **Total**                                                            | **8**  |
+
+**Exposición (12 puntos)**
+
+| Criterio                                                             | Puntos |
+|----------------------------------------------------------------------|--------|
+| Explicación del proceso de generación de embeddings                  | 4      |
+| Presentación de desafíos y soluciones en la preparación de datos     | 4      |
+| Claridad y coherencia en la exposición                               | 4      |
+| **Total**                                                            | **12** |
+
+### **Entregable 2 - Fecha: 7 de diciembre**
+
+**Trabajo (8 puntos)**
+
+| Criterio                                                               | Puntos |
+|------------------------------------------------------------------------|--------|
+| Desarrollo de método para capturar preferencias del usuario            | 3      |
+| Conversión de preferencias en embeddings compatibles                   | 3      |
+| Implementación del algoritmo de similitud entre embeddings             | 2      |
+| **Total**                                                              | **8**  |
+
+**Exposición (12 puntos)**
+
+| Criterio                                                                  | Puntos |
+|---------------------------------------------------------------------------|--------|
+| Demostración de cómo se capturan y procesan las preferencias del usuario  | 4      |
+| Explicación del algoritmo de recomendación basado en similitud            | 4      |
+| Interacción con la audiencia y manejo de preguntas                        | 4      |
+| **Total**                                                                 | **12** |
+
+### **Entregable 3 - Fecha: 14 de diciembre**
+
+**Trabajo (8 puntos)**
+
+| Criterio                                                               | Puntos |
+|------------------------------------------------------------------------|--------|
+| Integración completa del sistema de recomendación                      | 3      |
+| Pruebas realizadas y ajustes finales implementados                     | 3      |
+| Documentación detallada del sistema y su uso                           | 2      |
+| **Total**                                                              | **8**  |
+
+**Exposición (12 puntos)**
+
+| Criterio                                                               | Puntos |
+|------------------------------------------------------------------------|--------|
+| Demostración en vivo del sistema funcionando                           | 4      |
+| Presentación de resultados y feedback obtenido                         | 4      |
+| Calidad general de la exposición y recursos visuales utilizados        | 4      |
+| **Total**                                                              | **12** |
+
+---
+
+## **Proyecto 5: Desplegar una API de preguntas y respuestas basada en LLM finamente ajustado**
+
+### **Entregable 1 - Fecha: 30 de noviembre**
+
+**Trabajo (8 puntos)**
+
+| Criterio                                                                | Puntos |
+|-------------------------------------------------------------------------|--------|
+| Ajuste fino del LLM para preguntas y respuestas                         | 3      |
+| Indexación y organización eficiente de la base de datos de documentos   | 3      |
+| Implementación inicial de búsqueda eficiente en los documentos          | 2      |
+| **Total**                                                               | **8**  |
+
+**Exposición (12 puntos)**
+
+| Criterio                                                                 | Puntos |
+|--------------------------------------------------------------------------|--------|
+| Descripción del LLM y su ajuste para la tarea específica                 | 4      |
+| Explicación de la base de datos y mecanismos de búsqueda implementados   | 4      |
+| Claridad en la presentación y capacidad para responder preguntas         | 4      |
+| **Total**                                                                | **12** |
+
+### **Entregable 2 - Fecha: 7 de diciembre**
+
+**Trabajo (8 puntos)**
+
+| Criterio                                                             | Puntos |
+|----------------------------------------------------------------------|--------|
+| Desarrollo de la API con endpoints funcionales                       | 3      |
+| Integración del LLM con la búsqueda de documentos para respuestas    | 3      |
+| Manejo de excepciones y validación de entradas de usuario            | 2      |
+| **Total**                                                            | **8**  |
+
+**Exposición (12 puntos)**
+
+| Criterio                                                              | Puntos |
+|-----------------------------------------------------------------------|--------|
+| Demostración del funcionamiento de la API                             | 4      |
+| Explicación de la lógica detrás de la generación de respuestas        | 4      |
+| Interacción efectiva con la audiencia y manejo del tiempo             | 4      |
+| **Total**                                                             | **12** |
+
+### **Entregable 3 - Fecha: 14 de diciembre**
+
+**Trabajo (8 puntos)**
+
+| Criterio                                                            | Puntos |
+|---------------------------------------------------------------------|--------|
+| Pruebas exhaustivas realizadas y optimización de la API             | 3      |
+| Documentación completa y ejemplos de uso para desarrolladores       | 3      |
+| Reflexión sobre posibles mejoras y futuras expansiones              | 2      |
+| **Total**                                                           | **8**  |
+
+**Exposición (12 puntos)**
+
+| Criterio                                                                | Puntos |
+|-------------------------------------------------------------------------|--------|
+| Presentación de resultados finales y desempeño de la API                | 4      |
+| Discusión de desafíos enfrentados y cómo se superaron                   | 4      |
+| Calidad visual y estructuración de la presentación                      | 4      |
+| **Total**                                                               | **12** |
+
+---
+
+## **Proyecto 6: Utilizar Transformers para detectar anomalías en datos de series temporales**
+
+### **Entregable 1 - Fecha: 30 de noviembre**
+
+**Trabajo (8 puntos)**
+
+| Criterio                                                              | Puntos |
+|-----------------------------------------------------------------------|--------|
+| Recolección y preprocesamiento adecuado de los datos de series temporales | 3      |
+| Análisis exploratorio y identificación de patrones                    | 3      |
+| Configuración inicial del modelo Transformer adaptado                 | 2      |
+| **Total**                                                             | **8**  |
+
+**Exposición (12 puntos)**
+
+| Criterio                                                                 | Puntos |
+|--------------------------------------------------------------------------|--------|
+| Explicación de la importancia y desafíos de detectar anomalías           | 4      |
+| Presentación del análisis de datos y hallazgos iniciales                 | 4      |
+| Claridad y efectividad en la comunicación                                | 4      |
+| **Total**                                                                | **12** |
+
+### **Entregable 2 - Fecha: 7 de diciembre**
+
+**Trabajo (8 puntos)**
+
+| Criterio                                                               | Puntos |
+|------------------------------------------------------------------------|--------|
+| Entrenamiento del modelo con datos históricos                          | 3      |
+| Validación y ajuste de hiperparámetros                                 | 3      |
+| Implementación de técnicas para prevenir sobreajuste                   | 2      |
+| **Total**                                                              | **8**  |
+
+**Exposición (12 puntos)**
+
+| Criterio                                                                 | Puntos |
+|--------------------------------------------------------------------------|--------|
+| Explicación del proceso de entrenamiento y validación                    | 4      |
+| Presentación de resultados intermedios y métricas                        | 4      |
+| Interacción con la audiencia y capacidad para responder preguntas        | 4      |
+| **Total**                                                                | **12** |
+
+### **Entregable 3 - Fecha: 14 de diciembre**
+
+**Trabajo (8 puntos)**
+
+| Criterio                                                             | Puntos |
+|----------------------------------------------------------------------|--------|
+| Desarrollo de herramienta para aplicación en tiempo real             | 3      |
+| Pruebas realizadas en entornos simulados o reales                    | 3      |
+| Documentación y propuestas para integración futura                   | 2      |
+| **Total**                                                            | **8**  |
+
+**Exposición (12 puntos)**
+
+| Criterio                                                                 | Puntos |
+|--------------------------------------------------------------------------|--------|
+| Demostración del modelo funcionando en tiempo real                       | 4      |
+| Análisis de resultados y discusión sobre el impacto del proyecto         | 4      |
+| Calidad general de la presentación y uso de recursos visuales            | 4      |
+| **Total**                                                                | **12** |
+
+---
+
+## **Proyecto 7: Optimizar un modelo BERT para dispositivos móviles**
+
+### **Entregable 1 - Fecha: 30 de noviembre**
+
+**Trabajo (8 puntos)**
+
+| Criterio                                                          | Puntos |
+|-------------------------------------------------------------------|--------|
+| Análisis y aplicación de pruning al modelo BERT                   | 3      |
+| Evaluación del impacto del pruning en tamaño y precisión          | 3      |
+| Ajuste fino post-pruning para mejorar rendimiento                 | 2      |
+| **Total**                                                         | **8**  |
+
+**Exposición (12 puntos)**
+
+| Criterio                                                            | Puntos |
+|---------------------------------------------------------------------|--------|
+| Explicación detallada del proceso de pruning                        | 4      |
+| Presentación de resultados y comparación con el modelo original     | 4      |
+| Claridad en la comunicación y manejo del tiempo                     | 4      |
+| **Total**                                                           | **12** |
+
+### **Entregable 2 - Fecha: 7 de diciembre**
+
+**Trabajo (8 puntos)**
+
+| Criterio                                                           | Puntos |
+|--------------------------------------------------------------------|--------|
+| Implementación de quantization en el modelo podado                  | 3      |
+| Pruebas de inferencia en dispositivos limitados                     | 3      |
+| Resolución de problemas de precisión causados por la quantization   | 2      |
+| **Total**                                                           | **8**  |
+
+**Exposición (12 puntos)**
+
+| Criterio                                                               | Puntos |
+|------------------------------------------------------------------------|--------|
+| Explicación de la técnica de quantization y su importancia             | 4      |
+| Demostración de mejoras en eficiencia y discusiones sobre desafíos     | 4      |
+| Interacción efectiva con la audiencia                                  | 4      |
+| **Total**                                                              | **12** |
+
+### **Entregable 3 - Fecha: 14 de diciembre**
+
+**Trabajo (8 puntos)**
+
+| Criterio                                                             | Puntos |
+|----------------------------------------------------------------------|--------|
+| Aplicación de knowledge distillation y entrenamiento del modelo      | 3      |
+| Comparación del modelo distilado con el original                     | 3      |
+| Despliegue y evaluación en dispositivo móvil                         | 2      |
+| **Total**                                                            | **8**  |
+
+**Exposición (12 puntos)**
+
+| Criterio                                                                  | Puntos |
+|---------------------------------------------------------------------------|--------|
+| Presentación de resultados finales y rendimiento en dispositivos móviles  | 4      |
+| Reflexión sobre el proceso y aprendizajes obtenidos                       | 4      |
+| Calidad de la exposición y uso de recursos visuales                       | 4      |
+| **Total**                                                                 | **12** |
+
+---
+
+## **Proyecto 8: Crear una aplicación de resumen de documentos largos**
+
+### **Entregable 1 - Fecha: 30 de noviembre**
+
+**Trabajo (8 puntos)**
+
+| Criterio                                                               | Puntos |
+|------------------------------------------------------------------------|--------|
+| Implementación del enfoque de resumen extractivo                       | 3      |
+| Utilización de modelos preentrenados para evaluar importancia          | 3      |
+| Pruebas iniciales con documentos de ejemplo                            | 2      |
+| **Total**                                                              | **8**  |
+
+**Exposición (12 puntos)**
+
+| Criterio                                                                    | Puntos |
+|-----------------------------------------------------------------------------|--------|
+| Explicación del enfoque extractivo y su implementación                      | 4      |
+| Demostración de resultados iniciales                                        | 4      |
+| Claridad y coherencia en la presentación                                    | 4      |
+| **Total**                                                                   | **12** |
+
+### **Entregable 2 - Fecha: 7 de diciembre**
+
+**Trabajo (8 puntos)**
+
+| Criterio                                                                | Puntos |
+|-------------------------------------------------------------------------|--------|
+| Implementación del enfoque de resumen abstractive                       | 3      |
+| Ajuste fino del modelo para mejorar coherencia y fluidez                | 3      |
+| Comparación de resultados entre enfoques extractivo y abstractive       | 2      |
+| **Total**                                                               | **8**  |
+
+**Exposición (12 puntos)**
+
+| Criterio                                                                 | Puntos |
+|--------------------------------------------------------------------------|--------|
+| Explicación del enfoque abstractive y desafíos asociados                 | 4      |
+| Presentación comparativa de ambos enfoques                               | 4      |
+| Interacción con la audiencia y capacidad para responder preguntas        | 4      |
+| **Total**                                                                | **12** |
+
+### **Entregable 3 - Fecha: 14 de diciembre**
+
+**Trabajo (8 puntos)**
+
+| Criterio                                                              | Puntos |
+|-----------------------------------------------------------------------|--------|
+| Desarrollo de la aplicación con opciones para ambos tipos de resumen  | 3      |
+| Evaluación con usuarios y ajustes realizados según feedback           | 3      |
+| Documentación y preparación para despliegue                           | 2      |
+| **Total**                                                             | **8**  |
+
+**Exposición (12 puntos)**
+
+| Criterio                                                              | Puntos |
+|-----------------------------------------------------------------------|--------|
+| Demostración de la aplicación funcionando y sus características       | 4      |
+| Discusión sobre el impacto y posibles aplicaciones                    | 4      |
+| Calidad general de la presentación y recursos utilizados              | 4      |
+| **Total**                                                             | **12** |
+
+---
+
+## **Proyecto 9: Ajustar finamente un LLM con datos médicos**
+
+### **Entregable 1 - Fecha: 30 de noviembre**
+
+**Trabajo (8 puntos)**
+
+| Criterio                                                             | Puntos |
+|----------------------------------------------------------------------|--------|
+| Recolección de datos médicos cumpliendo regulaciones                 | 3      |
+| Anonimización y preprocesamiento adecuado de los datos               | 3      |
+| Revisión ética y legal del uso de los datos                          | 2      |
+| **Total**                                                            | **8**  |
+
+**Exposición (12 puntos)**
+
+| Criterio                                                               | Puntos |
+|------------------------------------------------------------------------|--------|
+| Explicación de los procedimientos para asegurar privacidad y ética     | 4      |
+| Presentación de los datos y su relevancia para el proyecto             | 4      |
+| Claridad en la exposición y manejo de preguntas                        | 4      |
+| **Total**                                                              | **12** |
+
+### **Entregable 2 - Fecha: 7 de diciembre**
+
+**Trabajo (8 puntos)**
+
+| Criterio                                                             | Puntos |
+|----------------------------------------------------------------------|--------|
+| Configuración y entrenamiento del LLM para tareas médicas            | 3      |
+| Validación del modelo en tareas de clasificación o extracción         | 3      |
+| Ajustes realizados para mejorar el rendimiento                        | 2      |
+| **Total**                                                            | **8**  |
+
+**Exposición (12 puntos)**
+
+| Criterio                                                                 | Puntos |
+|--------------------------------------------------------------------------|--------|
+| Presentación del modelo y su adaptación al dominio médico                | 4      |
+| Resultados obtenidos y análisis de desempeño                             | 4      |
+| Interacción efectiva con la audiencia                                    | 4      |
+| **Total**                                                                | **12** |
+
+### **Entregable 3 - Fecha: 14 de diciembre**
+
+**Trabajo (8 puntos)**
+
+| Criterio                                                                | Puntos |
+|-------------------------------------------------------------------------|--------|
+| Desarrollo de herramienta o aplicación que utiliza el modelo            | 3      |
+| Pruebas realizadas con profesionales médicos y feedback recopilado      | 3      |
+| Documentación y reflexión sobre mejoras futuras                         | 2      |
+| **Total**                                                               | **8**  |
+
+**Exposición (12 puntos)**
+
+| Criterio                                                                 | Puntos |
+|--------------------------------------------------------------------------|--------|
+| Demostración de la herramienta en funcionamiento                         | 4      |
+| Discusión sobre el impacto y consideraciones éticas                      | 4      |
+| Calidad de la presentación y recursos visuales utilizados                | 4      |
+| **Total**                                                                | **12** |
+
+---
+
+## **Proyecto 10: Crear un sistema de generación de texto condicional basado en estilos o temas específicos**
+
+### **Entregable 1 - Fecha: 30 de noviembre**
+
+**Trabajo (8 puntos)**
+
+| Criterio                                                               | Puntos |
+|------------------------------------------------------------------------|--------|
+| Recolección y etiquetado de datos representativos de estilos/temas     | 3      |
+| Configuración del LLM para aceptar condiciones o controles             | 3      |
+| Preprocesamiento y preparación de los datos para entrenamiento         | 2      |
+| **Total**                                                              | **8**  |
+
+**Exposición (12 puntos)**
+
+| Criterio                                                                 | Puntos |
+|--------------------------------------------------------------------------|--------|
+| Explicación de la importancia del control en generación de texto         | 4      |
+| Presentación de los datos y su relevancia                                | 4      |
+| Claridad y efectividad en la comunicación                                | 4      |
+| **Total**                                                                | **12** |
+
+### **Entregable 2 - Fecha: 7 de diciembre**
+
+**Trabajo (8 puntos)**
+
+| Criterio                                                               | Puntos |
+|------------------------------------------------------------------------|--------|
+| Entrenamiento del modelo con técnicas de control implementadas         | 3      |
+| Pruebas de generación de texto en diferentes estilos/temas             | 3      |
+| Ajuste de parámetros para mejorar calidad y coherencia                  | 2      |
+| **Total**                                                              | **8**  |
+
+**Exposición (12 puntos)**
+
+| Criterio                                                                 | Puntos |
+|--------------------------------------------------------------------------|--------|
+| Demostración de ejemplos de texto generado bajo diferentes condiciones   | 4      |
+| Explicación de las técnicas de control utilizadas                        | 4      |
+| Interacción con la audiencia y capacidad para responder preguntas        | 4      |
+| **Total**                                                                | **12** |
+
+### **Entregable 3 - Fecha: 14 de diciembre**
+
+**Trabajo (8 puntos)**
+
+| Criterio                                                              | Puntos |
+|-----------------------------------------------------------------------|--------|
+| Desarrollo de la interfaz que permite seleccionar condiciones          | 3      |
+| Evaluación del sistema con usuarios y recopilación de feedback         | 3      |
+| Refinamiento final y documentación del sistema                         | 2      |
+| **Total**                                                              | **8**  |
+
+**Exposición (12 puntos)**
+
+| Criterio                                                               | Puntos |
+|------------------------------------------------------------------------|--------|
+| Presentación de la interfaz y funcionalidades del sistema              | 4      |
+| Discusión sobre resultados y posibles aplicaciones prácticas           | 4      |
+| Calidad general de la exposición y uso de recursos visuales            | 4      |
+| **Total**                                                              | **12** |
+
+---
+
+## **Proyecto 11: Optimizar un modelo Transformer con técnicas de pruning y quantization para dispositivos edge**
+
+### **Entregable 1 - Fecha: 30 de noviembre**
+
+**Trabajo (8 puntos)**
+
+| Criterio                                                              | Puntos |
+|-----------------------------------------------------------------------|--------|
+| Identificación y aplicación de pruning al modelo Transformer          | 3      |
+| Evaluación del impacto en rendimiento y tamaño del modelo             | 3      |
+| Retraining del modelo post-pruning si es necesario                    | 2      |
+| **Total**                                                             | **8**  |
+
+**Exposición (12 puntos)**
+
+| Criterio                                                               | Puntos |
+|------------------------------------------------------------------------|--------|
+| Explicación de la necesidad de optimización para dispositivos edge     | 4      |
+| Presentación del proceso y resultados del pruning                      | 4      |
+| Claridad y efectividad en la comunicación                              | 4      |
+| **Total**                                                              | **12** |
+
+### **Entregable 2 - Fecha: 7 de diciembre**
+
+**Trabajo (8 puntos)**
+
+| Criterio                                                              | Puntos |
+|-----------------------------------------------------------------------|--------|
+| Implementación de quantization y optimización adicional               | 3      |
+| Pruebas de rendimiento en simuladores de dispositivos edge            | 3      |
+| Optimización de velocidad de inferencia y uso de memoria              | 2      |
+| **Total**                                                             | **8**  |
+
+**Exposición (12 puntos)**
+
+| Criterio                                                                  | Puntos |
+|---------------------------------------------------------------------------|--------|
+| Explicación de las técnicas de quantization y su aplicación               | 4      |
+| Demostración de mejoras en rendimiento y eficiencia                       | 4      |
+| Interacción efectiva con la audiencia                                     | 4      |
+| **Total**                                                                 | **12** |
+
+### **Entregable 3 - Fecha: 14 de diciembre**
+
+**Trabajo (8 puntos)**
+
+| Criterio                                                               | Puntos |
+|------------------------------------------------------------------------|--------|
+| Despliegue del modelo optimizado en un dispositivo edge                | 3      |
+| Evaluación del rendimiento en condiciones reales                       | 3      |
+| Documentación de procedimientos y resultados                           | 2      |
+| **Total**                                                              | **8**  |
+
+**Exposición (12 puntos)**
+
+| Criterio                                                                  | Puntos |
+|---------------------------------------------------------------------------|--------|
+| Demostración en vivo del modelo funcionando en el dispositivo edge        | 4      |
+| Discusión sobre los desafíos y soluciones implementadas                   | 4      |
+| Calidad general de la presentación y uso de recursos visuales             | 4      |
+| **Total**                                                                 | **12** |
+
+
