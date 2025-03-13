@@ -55,7 +55,7 @@
 1. Para que puedas editar y guardar los cuadernos desde tu máquina (y no sólo dentro del contenedor), es recomendable montar la carpeta de notebooks en el contenedor. Esto se hace con la opción `-v` (o `--volume`).
 2. Expondremos el puerto 8888 (tal como se definió en el Dockerfile) y lo mapearemos al puerto 8888 de la máquina anfitriona. Esto se hace con la opción `-p 8888:8888`.
 
-#### 3.2 Ejemplo de comando:
+##### 3.2 Ejemplo de comando:
 
 ```bash
 docker run -it --rm \
@@ -91,8 +91,6 @@ Además de la línea de comandos, Docker Desktop en Windows también permite:
 
 Después, para acceder, repites el proceso de abrir la URL con el token en el navegador.
 
----
-
 #### 5. Ajustes y consejos finales
 
 - Si en lugar de `jupyter lab` prefieres usar `jupyter notebook`, puedes cambiar el comando final en el `Dockerfile`, o bien usar `jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser`.  
@@ -101,11 +99,11 @@ Después, para acceder, repites el proceso de abrir la URL con el token en el na
 
 
 ---
-### Actividades del curso de procesamiento de lenguaje natural CC3S2 (2024-2)
+#### Actividades del curso de procesamiento de lenguaje natural CC3S2 (2024-2)
 
 Repositorio que acompaña al curso CC0C2 Procesamiento de Lenguaje Natural
 
-### Lista de proyectos
+##### Lista de proyectos
 
 * Implementar desde cero mecanismos de atención dispersa (Sparse Attention), SliGLU, RMSNorm, MoE y Rope embedding en PyTorch.
 * Ajustar finamente un LLM con PPO vs DPO vs ORPO utilizando el paquete PEFT.
