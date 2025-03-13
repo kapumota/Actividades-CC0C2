@@ -99,9 +99,7 @@ Después, para acceder, repites el proceso de abrir la URL con el token en el na
 
 
 ---
-#### Actividades del curso de procesamiento de lenguaje natural CC3S2 (2024-2)
-
-Repositorio que acompaña al curso CC0C2 Procesamiento de Lenguaje Natural
+#### Proyectos del curso de procesamiento de lenguaje natural CC3S2 (2024-2)
 
 ##### Lista de proyectos
 
