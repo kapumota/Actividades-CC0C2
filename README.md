@@ -1,3 +1,10 @@
+### Cuadernos NLP 2025-2
+
+* Cuaderno 1:[Librerías NLP](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Librerias_NLP.ipynb)
+* Cuaderno 2:[Cargador de datos](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Cargador_datos_NLP.ipynb)
+* Cuaderno 3:[Tonkenización](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Tokenizacion.ipynb)
+
+
 ### Instrucciones 2025-1
 
 #### 1. Preparar la carpeta de trabajo
