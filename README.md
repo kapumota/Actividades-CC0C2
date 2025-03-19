@@ -5,6 +5,7 @@
 * Cuaderno 3: [Tokenización](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Tokenizacion.ipynb)
 * Cuaderno 4: [Algoritmo BPE](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/BPE.ipynb)
 * Cuaderno 5: [Normalización, lemantización y segmentación de palabras](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Normalizacion_lemantizacion.ipynb)
+* Cuaderno 6: [Distancias y algoritmo de Viterbi](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/distancias.ipynb)
 
 
 ### Instrucciones 2025-1
