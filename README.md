@@ -6,6 +6,8 @@
 * Cuaderno 4: [Algoritmo BPE](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/BPE.ipynb)
 * Cuaderno 5: [Normalización, lemantización y segmentación de palabras](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Normalizacion_lemantizacion.ipynb)
 * Cuaderno 6: [Distancias y algoritmo de Viterbi](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/distancias.ipynb)
+* Cuaderno 7: [Modelos de lenguaje]()
+* Cuaderno 8: [Construcción de un modelo n-gramas](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Modelos-ngramas/Modelo-ngramas.ipynb)
 
 
 ### Instrucciones 2025-1
