@@ -1,5 +1,6 @@
 
 **1. Introducción general a la ingeniería de IA y al procesamiento del lenguaje natural (NLP)**  
+
 La ingeniería de IA, y en concreto la ingeniería de procesamiento del lenguaje natural (NLP), se dedica al diseño, desarrollo y despliegue de aplicaciones que permiten a las máquinas comprender y generar lenguaje humano de manera autónoma. En este ámbito, el rol del ingeniero de IA o ingeniero de NLP implica enfrentarse a múltiples desafíos: desde la comprensión de las sutiles variaciones semánticas de un idioma hasta la puesta en producción de modelos complejos basados en redes neuronales profundas.  
 
 Uno de los aspectos centrales de la disciplina radica en el uso de modelos de aprendizaje profundo (deep learning), que son capaces de procesar grandes cantidades de datos textuales para extraer patrones lingüísticos y semánticos. Esto posibilita la construcción de aplicaciones generativas que crean texto, resúmenes, traducciones o respuestas contextualmente relevantes, con un alto grado de sofisticación. Sin embargo, el éxito de estas soluciones depende fuertemente de la calidad de los datos, de la selección adecuada de arquitecturas y de la integración correcta de diversas bibliotecas y herramientas que facilitan el flujo de trabajo de principio a fin.  
