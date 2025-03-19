@@ -4,6 +4,7 @@
 * Cuaderno 2: [Cargador de datos](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Cargador_datos_NLP.ipynb)
 * Cuaderno 3: [Tokenización](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Tokenizacion.ipynb)
 * Cuaderno 4: [Algoritmo BPE](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/BPE.ipynb)
+* Cuaderno 5: [Normalización, lemantización y segmentación de palabras](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Normalizacion_lemantizacion.ipynb)
 
 
 ### Instrucciones 2025-1
