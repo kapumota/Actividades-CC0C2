@@ -9,6 +9,7 @@
 * Cuaderno 7: [Introducción a los modelos de lenguaje](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Modelos_lenguaje.ipynb)
 * Cuaderno 8: [Construcción de un modelo n-gramas](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Modelos-ngramas/Modelo-ngramas.ipynb)
 * Cuaderno 9: [Evaluación de modelos de lenguaje](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Evaluacion_modelos_lenguaje.ipynb)
+* Cuaderno 10: [Introducción a las respresentaciones de texto](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Representaciones_texto.ipynb)
 
 
 ### Instrucciones 2025-1
