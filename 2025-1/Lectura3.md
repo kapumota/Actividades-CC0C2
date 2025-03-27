@@ -7,7 +7,7 @@ evaluar la calidad del texto que generan. Es aquí donde entran en juego diversa
 medir, de forma objetiva, la calidad de las salidas generadas por estos sistemas.
 
 El objetivo primordial de las métricas de evaluación es brindar una herramienta que permita a los investigadores y desarrolladores identificar las fortalezas y debilidades de un modelo 
-de NLP, facilitando la mejora y optimización de estos sistemas. En este informe se analizan en detalle cuatro métricas esenciales:  Perplejidad, ROUGE, BLEU y METEOR. 
+de NLP, facilitando la mejora y optimización de estos sistemas. En este informe se analizan en detalle cuatro métricas esenciales:  **Perplejidad**, **ROUGE**, **BLEU** y **METEOR**. 
 
 Cada una de estas métricas aborda la evaluación desde una perspectiva diferente, permitiendo así un análisis multidimensional de la calidad del texto generado.
 
