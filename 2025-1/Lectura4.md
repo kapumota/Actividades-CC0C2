@@ -98,7 +98,7 @@ El PMI ha sido empleado en la construcción de matrices de co-ocurrencia que sir
 singulares (SVD), y que han sido esenciales para el desarrollo de representaciones vectoriales de palabras.
 
 
-#### One-Hot Encoding: una representación inicial
+#### One-Hot encoding: una representación inicial
 
 El one-hot encoding es una técnica sencilla y directa para representar palabras como vectores binarios. En este esquema, cada palabra del vocabulario se asigna a un vector en el que 
 solo una posición (la correspondiente a la palabra) contiene el valor 1 y todas las demás posiciones tienen valor 0. 
