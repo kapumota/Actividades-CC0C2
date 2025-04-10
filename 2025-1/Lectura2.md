@@ -33,7 +33,7 @@ Además de las métricas cuantitativas (como BLEU, ROUGE, METEOR, perplejidad, e
 La IA generativa abarca diversas arquitecturas y metodologías, cada una adecuada para distintos tipos de datos y tareas:
 
 1. **Redes neuronales recurrentes (RNNs)**  
-   Son apropiadas para datos secuenciales o series temporales. Se caracterizan por un bucle interno que permite al modelo “recordar” información de pasos anteriores y usarla para predecir la siguiente salida. Sin embargo, tienden a tener dificultades para mantener dependencias largas.
+   Son apropiadas para datos secuenciales o series temporales. Se caracterizan por un bucle interno que permite al modelo "recordar" información de pasos anteriores y usarla para predecir la siguiente salida. Sin embargo, tienden a tener dificultades para mantener dependencias largas.
 
 2. **Transformers**  
    Emplean un mecanismo de autoatención (self-attention) que permite asignar un peso relativo a cada parte de la secuencia. Estas arquitecturas han supuesto un gran avance en NLP, pues facilitan procesar secuencias en paralelo y capturar relaciones de largo alcance sin los problemas de memoria que presentan las RNN.
@@ -75,10 +75,10 @@ En el marco de la evaluación de modelos de lenguaje y de sus variantes generati
 - Incluye también una penalización por brevedad, de modo que no se valore con alta puntuación una traducción mucho más corta que la referencia.  
 - Un BLEU alto indica que el texto generado se acerca significativamente a la o las referencias utilizadas.
 
-Estas dos métricas abarcan diferentes aspectos de evaluación. La perplejidad se enfoca más en la capacidad predictiva interna del modelo, en su coherencia con la distribución del lenguaje, mientras que BLEU se orienta a medir la similitud n-gram entre un texto generado y uno de referencia (típicamente en traducción). Ambas herramientas son de gran ayuda para los investigadores, aunque no siempre reflejan la totalidad de la “calidad” de un texto según criterios de estilo, veracidad o fluidez subjetiva.
+Estas dos métricas abarcan diferentes aspectos de evaluación. La perplejidad se enfoca más en la capacidad predictiva interna del modelo, en su coherencia con la distribución del lenguaje, mientras que BLEU se orienta a medir la similitud n-gram entre un texto generado y uno de referencia (típicamente en traducción). Ambas herramientas son de gran ayuda para los investigadores, aunque no siempre reflejan la totalidad de la "calidad" de un texto según criterios de estilo, veracidad o fluidez subjetiva.
 
 
-### 6. ROUGE y BLEU
+#### 6. ROUGE y BLEU
 
 ROUGE y BLEU a menudo se discuten de forma conjunta en la evaluación de modelos de generación de texto, ya que ambos se basan en mediciones de superposición de n-grams (entre otros recursos), pero se aplican en diferentes contextos:
 
@@ -123,7 +123,7 @@ La preparación de los datos es un paso fundamental en cualquier proyecto de int
 Para que un modelo trabaje con texto, es necesario convertir las palabras en vectores numéricos. Existen varios métodos:
 
 1. **One-hot encoding**  
-   - Cada palabra se codifica como un vector de longitud igual al tamaño del vocabulario, con un “1” en la posición correspondiente a esa palabra y “0” en el resto.  
+   - Cada palabra se codifica como un vector de longitud igual al tamaño del vocabulario, con un "1" en la posición correspondiente a esa palabra y "0" en el resto.  
    - Puede ser muy grande (si el vocabulario es extenso) y no refleja relaciones semánticas entre palabras.
 
 2. **Bag-of-Words (BoW)**  
@@ -203,7 +203,7 @@ Cuando se requiere transformar una secuencia en otra (traducción, subtitulado a
 
 - **Dificultades de entrenamiento**  
   - Las RNN son propensas al problema de gradiente desaparecido o explosivo, especialmente con secuencias largas.  
-  - Mecanismos de atención (attention) ayudan a mitigar este problema al permitir que el decoder “observe” selectivamente distintas partes de la secuencia de entrada.
+  - Mecanismos de atención (attention) ayudan a mitigar este problema al permitir que el decoder "observe" selectivamente distintas partes de la secuencia de entrada.
 
 
 #### 14. Métricas de evaluación en modelos generativos de texto
