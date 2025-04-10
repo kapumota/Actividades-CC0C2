@@ -63,13 +63,13 @@ Al contar con grandes conjuntos de datos y millones o miles de millones de pará
 En la práctica, los LLMs se utilizan para chatbots conversacionales, sistemas de recomendaciones de contenido y clasificación de textos, entre muchas otras aplicaciones. Su éxito está vinculado a su capacidad para adaptarse a dominios variados y a su habilidad para entender matices lingüísticos.  
 
 **8. Tokenización y preparación de datos en NLP**  
-La etapa de preparación de datos es determinante en los resultados que se obtienen de los modelos de IA generativa. Dentro de este proceso, **la tokenización** cobra relevancia, ya que implica la división de un texto en unidades llamadas “tokens”, que pueden ser palabras completas, caracteres o subpalabras.  
+La etapa de preparación de datos es determinante en los resultados que se obtienen de los modelos de IA generativa. Dentro de este proceso, **la tokenización** cobra relevancia, ya que implica la división de un texto en unidades llamadas "tokens", que pueden ser palabras completas, caracteres o subpalabras.  
 
 - **Tokenización basada en palabras**: Trata a cada palabra como un token independiente, conservando el sentido semántico pero incrementando el tamaño del vocabulario.  
 - **Tokenización basada en caracteres**: Incrementa la flexibilidad y reduce el tamaño del vocabulario, pero puede dificultar la captura de significados semánticos completos.  
 - **Tokenización basada en subpalabras**: Emplea algoritmos como WordPiece, Unigram o SentencePiece para partir palabras poco frecuentes en unidades más pequeñas, mientras deja intactas las palabras más comunes.  
 
-En muchos proyectos de NLP, se añaden tokens especiales como \<bos> (beginning of sentence) y \<eos> (end of sentence) para indicar el inicio y fin de una secuencia.  
+En muchos proyectos de NLP, se añaden tokens especiales como `\<bos>` (beginning of sentence) y `\<eos>` (end of sentence) para indicar el inicio y fin de una secuencia.  
 
 **8.1. DataSet y DataLoader en PyTorch**  
 En PyTorch, la clase `DataSet` representa un conjunto de datos con muestras y, a menudo, etiquetas. Para facilitar y agilizar el entrenamiento, se usa la clase `DataLoader`, que encapsula un `DataSet` y ofrece funcionalidades como el muestreo aleatorio, la creación de lotes (batches) y la iteración simple en cada época de entrenamiento.  
