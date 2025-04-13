@@ -1,4 +1,4 @@
-### Cuadernos NLP 2025-2
+### Cuadernos NLP 2025-1
 
 * Cuaderno 1: [Librerías NLP](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Librerias_NLP.ipynb)
 * Cuaderno 2: [Cargador de datos](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Cargador_datos_NLP.ipynb)
