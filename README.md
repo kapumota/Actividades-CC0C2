@@ -10,7 +10,7 @@
 * Cuaderno 8: [Construcción de un modelo n-gramas](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Modelos-ngramas/Modelo-ngramas.ipynb)
 * Cuaderno 9: [Regularización de modelos de lenguaje](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Regularizacion.ipynb)
 * Cuaderno 10: [Evaluación de modelos de lenguaje](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Evaluacion_modelos_lenguaje.ipynb)
-* Cuaderno 11: [Introducción a las respresentaciones de texto](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Representaciones_texto.ipynb)
+* Cuaderno 11: [Introducción a las representaciones de texto](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Representaciones_texto.ipynb)
 * Cuaderno 12: [Semántica vectorial y embeddings](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Semantica_vectorial.ipynb)
 * Cuaderno 13: [Representaciones distribuidas](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Representaciones_distribuidas.ipynb)
 * Cuaderno 14: [Modelos de embeddings de palabras - TensorFlow](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Embeddings_palabras/Word2Vec-SkipGram.ipynb)
