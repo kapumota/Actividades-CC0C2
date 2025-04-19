@@ -12,7 +12,7 @@
 * Cuaderno 10: [Evaluación de modelos de lenguaje](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Evaluacion_modelos_lenguaje.ipynb)
 * Cuaderno 11: [Introducción a las respresentaciones de texto](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Representaciones_texto.ipynb)
 * Cuaderno 12: [Semántica vectorial y embeddings](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Semantica_vectorial.ipynb)
-* Cuaderno 13: [Notas sobre embeddings]()
+* Cuaderno 13: [Representaciones distribuidad](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Representaciones_distribuidas.ipynb)
 * Cuaderno 14: [Integrando word2vec](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Integrando_word2vec.ipynb)
 * Cuaderno 15: [Modelos de embeddings de palabras - TensorFlow](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Embeddings_palabras/Word2Vec-SkipGram.ipynb)
 * Cuaderno 16: [Repaso: modelos de lenguaje usando redes neuronales]()
