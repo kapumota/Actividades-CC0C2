@@ -12,8 +12,11 @@
 * Cuaderno 10: [Evaluación de modelos de lenguaje](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Evaluacion_modelos_lenguaje.ipynb)
 * Cuaderno 11: [Introducción a las respresentaciones de texto](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Representaciones_texto.ipynb)
 * Cuaderno 12: [Semántica vectorial y embeddings](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Semantica_vectorial.ipynb)
-
-
+* Cuaderno 13: [Notas sobre embeddings]()
+* Cuaderno 14: [Integrando word2vec](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Integrando_word2vec.ipynb)
+* Cuaderno 15: [Aplicación a los embeddings de palabras]()
+* Cuaderno 16: [Repaso: modelos de lenguaje usando redes neuronales]()
+  
 ### Instrucciones 2025-1
 
 #### 1. Preparar la carpeta de trabajo
