@@ -14,7 +14,7 @@
 * Cuaderno 12: [Semántica vectorial y embeddings](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Semantica_vectorial.ipynb)
 * Cuaderno 13: [Notas sobre embeddings]()
 * Cuaderno 14: [Integrando word2vec](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Integrando_word2vec.ipynb)
-* Cuaderno 15: [Aplicación a los embeddings de palabras]()
+* Cuaderno 15: [Aplicación a los embeddings de palabras](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Embeddings_palabras/Word2Vec-SkipGram.ipynb)
 * Cuaderno 16: [Repaso: modelos de lenguaje usando redes neuronales]()
   
 ### Instrucciones 2025-1
