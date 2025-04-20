@@ -292,3 +292,55 @@ Supón que entrenamos un modelo GPT con cientos de miles de novelas y artículos
 - La arquitectura autoregresiva convierte a GPT en un generador de texto fluido, pues cada paso maximiza la probabilidad de la siguiente palabra.  
 - El **fine‑tuning** permite especializar al modelo de forma eficiente: basta con un conjunto moderado de ejemplos etiquetados para adaptarlo a dominios muy concretos (legal, médico, creativo, etc.), sin sacrificar la capacidad de generación general aprendida en el preentrenamiento.
 
+### Representaciones de frases y oraciones
+
+A medida que la investigación en NLP avanzó, surgieron técnicas que elevan los embeddings de palabra hasta el nivel de frase u oración, con el objetivo de capturar tanto el significado global como las relaciones internas entre términos. 
+
+#### Promedio de vectores y métodos basados en media
+
+La forma más directa de construir un embedding de oración consiste en calcular la media (o la suma) de los vectores de palabra que la componen. Este método aprovecha embeddings preentrenados de alta calidad, como los obtenidos con Word2Vec o GloVe, y simplemente los agrega para obtener una representación fija de la frase.
+
+**Ejemplo**  
+
+- **Oración A**: "El sol brilla en el cielo."  
+- **Oración B**: "Cielo brilla el sol en."  
+
+Ambas oraciones comparten exactamente las mismas palabras, por lo que la media de sus vectores será idéntica. En tareas de similitud de oración, A y B obtendrán puntuaciones muy altas, pese a que su orden sintáctico es distinto.  
+- **Ventaja**: sorprendentemente competitivo en benchmarks de similitud semántica cuando las oraciones comparten el mismo vocabulario.  
+- **Limitación**: carece de sensibilidad al orden ("perro muerde hombre" vs. "hombre muerde perro" resultan equivalentes) y no discrimina construcciones compuestas o negaciones ("no me gusta" vs. "me gusta").
+
+**Autoencoders y codificadores secuencia a secuencia**
+
+Los autoencoders de texto comprimen una oración completa en un vector latente de dimensión reducida (el "cuello de botella") y luego intentan reconstruir la misma oración. La calidad de la reconstrucción sirve como señal para aprender vectores que capturan dependencias de largo alcance.  
+- Las variantes más potentes incorporan **mecanismos de atención**, que permiten al descodificador "mirar" selectivamente diferentes partes de la representación intermedia al generar cada palabra.
+
+**Ejemplo**  
+- **Oración**: "La niña recogió flores silvestres en el jardín al amanecer."  
+- **Proceso**:  
+  1. El encoder lee palabra por palabra y condensa toda la información en un único vector.  
+  2. El decoder intenta generar palabra por palabra la misma oración.  
+  3. Con atención, al producir "flores" el modelo da más peso a las posiciones donde aparecieron "recogió" y "silvestres", al generar "amanecer", enfoca en "jardín2 y "amanecer".  
+- **Resultado**: si el vector latente logra reproducir fielmente la frase, se asume que ha capturado correctamente tanto el léxico como la estructura sintáctica y semántica de la oración completa.
+
+#### Embeddings universales de oraciones
+
+Modelos como **InferSent**, **Universal Sentence Encoder** y **Sentence‑BERT** van más allá del autoencoder, entrenando **encoders de oraciones** directamente en tareas de comparación y clasificación de pares de frases. Su objetivo es optimizar la representación para que:  
+- Oraciones **parafraseadas** queden muy cercanas en el espacio vectorial.  
+- Oraciones **contradictorias** o **no relacionadas** queden claramente separadas.  
+- Los vectores sirvan como entrada robusta para tareas downstream (clasificación, respuesta a preguntas, detección de contradicción).
+
+**Ejemplo**  
+1. **Paráfrasis**  
+   - "Un hombre lee un libro en el parque."  
+   - "Alguien está disfrutando de la lectura al aire libre."  
+   → Alta similitud: el modelo junta ambos vectores muy cerca.
+
+2. **Contradicción**  
+   - "El gato duerme plácidamente." 
+   - "El gato no ha dejado de maullar en toda la noche."  
+   → Baja similitud: aunque comparten la misma protagonista, el significado general es opuesto.
+
+3. **Aplicación en clasificación**  
+   - Tarea: detectar si un par de oraciones expresa contradicción, paraphrase o neutralidad (benchmark SNLI).  
+   - Método: concatenar o comparar con operaciones vectoriales ambos embeddings y pasar por una capa ligera de clasificación.  
+   - Resultado: altos porcentajes de exactitud (por encima del 88 %) en comparación con métodos basados solo en promedios o autoencoders.
