@@ -260,7 +260,7 @@ Frase de ejemplo:
 > "El clima en la costa es cálido, pero en la **montaña** hace frío."
 
 1. **Objetivo de "máscara"**  
-   - Se oculta aleatoriamente "montaña2: "El clima en la costa es cálido, pero en la `[MASK]` hace frío."  
+   - Se oculta aleatoriamente "montaña": "El clima en la costa es cálido, pero en la `[MASK]` hace frío."  
    - El modelo debe adivinar "montaña" basándose en ambas mitades de la oración (antes y después de la máscara).
 
 2. **Objetivo de "segmentos contiguos"**  
@@ -344,3 +344,139 @@ Modelos como **InferSent**, **Universal Sentence Encoder** y **Sentence‑BERT**
    - Tarea: detectar si un par de oraciones expresa contradicción, paraphrase o neutralidad (benchmark SNLI).  
    - Método: concatenar o comparar con operaciones vectoriales ambos embeddings y pasar por una capa ligera de clasificación.  
    - Resultado: altos porcentajes de exactitud (por encima del 88 %) en comparación con métodos basados solo en promedios o autoencoders.
+
+### Representaciones jerárquicas de documentos
+
+A lo largo de los años, el desafío de representar documentos extensos con vectores densos ha impulsado el diseño de arquitecturas que van más allá de la suma de embeddings de palabra. El propósito es capturar no solo la presencia de términos, sino también la estructura y la importancia relativa de fragmentos de texto a distintos niveles de granularidad.
+
+#### Doc2Vec: extendiendo la idea de Word2Vec al documento completo
+
+Doc2Vec nace de la intuición de que un documento tiene un  perfil semántico que no se reduce a la suma de sus palabras aisladas. En la modalidad de **memoria distribuida**, cuando el modelo intenta predecir la próxima palabra en un texto, por ejemplo, en un comentario de reseña de restaurante—no solo usa los vectores de "deliciosa", "cocina", "italiana", sino también un vector especial que representa toda la reseña. Así, aunque dos reseñas distintas compartan palabras como "servicio" o "ambiente", sus vectores de documento diferencian matices: una puede enfatizar la puntualidad del personal y otra el sabor de los platos.
+
+Por otro lado, la variante de **bolsa de palabras distribuida** omite el contexto inmediato y obliga al vector de documento a predecir, de forma aleatoria, términos clave extraídos de cualquier parte del texto. 
+
+Imaginemos un artículo de blog de tecnología: el vector de documento se ajusta para maximizar la probabilidad de ver palabras como "procesador", "rendimiento" o "benchmark". Esto genera representaciones que agrupan el contenido temático completo, de modo que dos posts sobre smartphones de distintas marcas puedan quedar cerca en el espacio vectorial si comparten el mismo enfoque —por ejemplo, comparar cámaras y duración de batería.
+
+#### Redes de atención jerárquica: de palabras a oraciones y de oraciones al documento
+
+En documentos muy largos, como informes financieros o investigaciones académicas no todas las frases ni todas las palabras importan por igual. Las **redes de atención jerárquica** tratan este desafío en dos etapas continuas:
+
+1. **Entre palabras de cada oración**: al procesar un párrafo técnico, la red aprende a prestar más atención a términos como "ingresos", "crecimiento" o "pérdida" y menos a conectores o artículos. De este modo, el vector resultante de cada oración refleja su núcleo informativo, no solo su contenido léxico.
+
+2. **Entre oraciones del documento**: una vez que cada párrafo tiene su embedding, la capa superior de atención pondera el valor de cada párrafo. Por ejemplo, en un informe trimestral de ventas, la sección de "resultados" recibirá mayor peso que la de "introducción" o "antecedentes". Al final, el vector global sintetiza el documento, destacando automáticamente sus secciones más relevantes.
+
+Gracias a este enfoque, al comparar dos informes financieros, uno centrado en fusiones y otro en balances, sus vectores globales reflejarán con precisión tanto el vocabulario técnico como la estructura jerárquica del texto, facilitando tareas como la clasificación de temas o la detección de anomalías.
+
+#### Ajuste fino y adaptaciones al dominio
+
+La eficacia de estas representaciones jerárquicas también depende del tipo de documento y de sus características. Un manual de usuario suele requerir ventanas de contexto muy cortas (párrafos de 50–100 palabras), mientras que un  paper académico puede beneficiarse de secciones de 1 000 palabras. Por ello:
+
+- **Granularidad de ventanas**: en reseñas de productos, basta agrupar oraciones en bloques pequeños; en tesis doctorales, conviene construir vectores de sección para luego combinarlos.
+- **Dimensión de los vectores**: textos altamente especializados (legal, médico) suelen usar embeddings de mayor dimensión (300–500), mientras que blogs o noticias operan bien con espacios de 100–200 dimensiones.
+- **Fine‑tuning**: partiendo de modelos jerárquicos preentrenados en corpus genéricos (Wikipedia, Common Crawl), se reentrenan ligeros fragmentos de la red con datos etiquetados del dominio objetivo. Por ejemplo, un modelo jerárquico adaptado a contratos legales aprenderá a resaltar cláusulas, plazos y términos jurídicos, optimizando su vector global para tareas de clasificación y búsqueda en ese ámbito específico.
+
+Estos avances permiten que cada vector de documento no solo represente su contenido léxico, sino también su arquitectura interna y su relevancia para tareas concretas, asegurando robustez y adaptabilidad en contextos reales.
+
+A medida que las representaciones distribuidas de texto han madurado, su aplicación en entornos reales exige no solo capacidad genérica, sino también adaptabilidad —ajustar el mismo embeddings a tareas concretas, garantizar su robustez frente a datos ruidosos y desplegarlos eficientemente en producción.
+
+### Adaptación dirigida a tareas específicas
+
+#### Entrenamiento multitarea y fine‑tuning  
+En lugar de entrenar un embedding únicamente con un objetivo (por ejemplo, predecir palabras), el enfoque **multitarea** combina varias señales de entrenamiento:
+
+- **Clasificación de sentimiento**: el modelo aprende a distinguir opiniones positivas de negativas.  
+- **Detección de entidades nombradas**: simultáneamente, identifica organizaciones, personas y lugares.  
+- **Respuesta a preguntas**: se expone a pares (pregunta, respuesta) para pulir su comprensión de contexto.
+
+**Ejemplo**  
+
+Imaginemos un sistema de análisis de reseñas de hoteles que, en un solo paso, recibe:  
+
+1. Reseñas etiquetadas con su sentimiento ("excelente servicio" → positivo).  
+2. Frases anotadas con entidades ("ubicación" → característica).  
+3. Preguntas frecuentes ("¿Hay wifi gratis?" → respuesta asociada).  
+
+Al compartir capas intermedias, el embedding resultante capturará tanto señales emocionales ("¡inolvidable!"), como la capacidad de resaltar términos clave ("piscina", "desayuno") y de responder preguntas documentadas. Finalmente, en la fase de **fine‑tuning**, se toman esos embeddings preentrenados y se ajustan con un pequeño conjunto de datos finamente etiquetados para, por ejemplo, maximizar la precisión en la clasificación de comentarios de un nuevo mercado.
+
+#### Incorporación de atención focalizada  
+
+Más allá de la atención global que pondera todos los tokens, la **atención focalizada** introduce "consultas" aprendibles que dirigen el foco a segmentos críticos de la oración o documento:
+
+**Ejemplo**  
+
+En un sistema de análisis legal extraemos cláusulas relevantes:
+
+- Se define una consulta que enfatiza términos de obligación ("deberá", "responsabilidad") y fechas límite ("antes de", "hasta").  
+- Al procesar un contrato, la atención focalizada resalta automáticamente estas secciones, produciendo un embedding de cláusula que luego sirve para alimentar un clasificador de riesgos contractuales.
+
+Este mecanismo permite que, dentro de un mismo texto, diferentes submódulos de atención extraigan aspectos distintos: cumplimiento normativo, plazos, penalizaciones, etc., formando vectores especializados según la función deseada.
+
+### Desafíos y consideraciones prácticas
+
+#### Manejo de vocabularios y términos raros  
+El continuo flujo de neologismos (por ejemplo, jerga de redes sociales), tecnicismos (términos médicos) y errores ortográficos obliga a diseñar pipelines de **normalización**:
+
+- **Descomposición en subunidades**: palabras nuevas ("biohacking") se fragmentan ("bio", "hack2, "ing") para reutilizar piezas conocidas.  
+- **Aproximación fonética**: en sistemas de búsqueda por voz, "alergia" vs. "alegría" se distinguen por fonemas, permitiendo corregir transcripciones erróneas.
+
+**Ejemplo**  
+Un chatbot de salud recibe "Tengo alergia al pólen". El pipe detecta la tilde incorrecta y convierte "pólen" en "polen", mapea "polen" a subunidades que aparecieron en el entrenamiento y finalmente interpreta correctamente la condición médica.
+
+#### Interpretabilidad y sesgo en embeddings  
+Los vectores aprenden patrones de los datos: si el corpus refleja estereotipos de género ("enfermera" → femenino, "ingeniero" → masculino), los embeddings arrastrarán esos **sesgos**. Se requieren:
+
+- **Métricas intrínsecas**: pruebas de analogías sensibles ("mujer" es a "enfermera" como "hombre" es a "enfermero").  
+- **Métricas extrínsecas**: medir diferencias de rendimiento en tareas por género o grupo demográfico.
+
+**Ejemplo**  
+Un sistema de reclutamiento basado en embeddings clasifica currículos, pero detecta que los vectores favorecen candidatos masculinos para ingeniería. Se aplica un paso de **despolarización**, ajustando los vectores para neutralizar la variable "género" sin perder información profesional.
+
+#### Escalabilidad y eficiencia computacional  
+
+Entrenar y servir embeddings a gran escala demanda optimizaciones:
+
+- **Mixed precision**: mezclar cálculos en 16 y 32 bits para acelerar el entrenamiento en GPU/TPU sin sacrificar precisión.  
+- **Paralelismo**: distribuir batches de texto en múltiples dispositivos o dividir el propio modelo en segmentos.
+
+**Ejemplo**  
+Un proveedor de búsqueda semántica entrena su modelo con mil millones de oraciones en clústeres de GPU usando mixed precision y reduce el tiempo de entrenamiento de dos semanas a dos días, manteniendo la calidad de las representaciones.
+
+#### Evaluación intrínseca y extrínseca de representaciones  
+
+- **Intrínseca**: coherencia interna —¿puede resolver analogías (Rey-Reina = Hombre-Mujer)?  
+- **Extrínseca**: impacto efectivo —¿mejora la precisión en clasificación de correos spam?
+
+**Ejemplo**  
+
+Durante el desarrollo de un modelo de atención para emails, se observa que un embedding con alta puntuación en tests analógicos no mejora sustancialmente la detección de phishing. Esto evidencia la disociación que a veces existe entre métricas internas y resultados en aplicaciones reales.
+
+### Perspectivas y contexto de uso
+
+#### Investigaciones emergentes  
+
+El horizonte se expande hacia **multimodalidad** y **auto‑supervisión**:
+
+- **Textos + vídeos**: embeddings que alinean subtítulos de conferencias con fotogramas relevantes.  
+- **Grafos de conocimiento**: vectores que integran relaciones de base de conocimiento (por ejemplo, "París" conectado a "Francia" y "capital").
+
+**Ejemplo**  
+Un sistema educativo en línea usa embeddings multimodales para vincular explicaciones de texto con fragmentos de video y gráficos, ofreciendo una búsqueda semántica que comprende preguntas orales y devuelve la sección de video más pertinente.
+
+#### Integración en sistemas de producción  
+En entornos corporativos, los embeddings se despliegan como microservicios:
+
+- **APIs de consulta**: recibir un texto y devolver su vector en milisegundos.  
+- **Vector databases**: índices especializados que permiten búsquedas de similitud en millones de vectores.
+
+**Ejemplo**  
+Una plataforma de atención al cliente integra un microservicio que, al ingresar la transcripción de un chat, busca en la base de conocimientos interna la respuesta más parecida, reduciendo tiempos de resolución de incidencias.
+
+#### Futuras direcciones de exploración  
+Se investigan líneas como:
+
+- **Compresión y cuantización** para ejecutar modelos en **edge devices**, manteniendo latencia baja.  
+- **Aprendizaje federado** en datos sensibles (sanidad, finanzas), preservando la privacidad al entrenar embeddings de usuario sin centralizar la información.  
+- Nuevas métricas de **equidad** y **explicabilidad** que permitan auditar y justificar decisiones automatizadas basadas en embeddings.
+
+**Ejemplo**  
+En un proyecto piloto médico, se entrena un embedding de diagnóstico en hospitales varios usando federated learning, logrando vectores que aprenden patrones de enfermedad sin compartir historiales clínicos entre centros.
