@@ -16,6 +16,9 @@
 * Cuaderno 14: [Representaciones distribuidas](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Representaciones_distribuidas.ipynb)
 * Cuaderno 15: [Modelos de embeddings de palabras - TensorFlow](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Embeddings_palabras/Word2Vec-SkipGram.ipynb)
 * Cuaderno 16: [Integrando word2vec](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Integrando_word2vec.ipynb)
+* Cuaderno 17: [Modelos RNN de secuencia a secuencia: Tarea de traducción](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Modelos-RNN-Seq2seq.ipynb)
+* Cuaderno 18: [Tecnicas de decodificacion_para modelado_secuencias](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Tecnicas_decodificacion_modelado_secuencias.ipynb)
+* Cuaderno 19: [Backpropagation through time (BPTT)](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/BPTT.ipynb)
 
   
 ### Instrucciones 2025-1
