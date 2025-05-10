@@ -41,3 +41,52 @@ Cuando hablamos de modelos que no caben en la memoria de un solo dispositivo, o 
 Finalmente, la elección de un **optimizador eficiente** puede marcar la diferencia entre un entrenamiento que converge en pocas épocas y uno que no logra alcanzar el rendimiento deseado. Dos de los optimizadores más populares en el entrenamiento de Transformers son **AdamW** y **LAMB**. AdamW incorpora un término de decaimiento de peso desacoplado de la tasa de aprendizaje, mejorando la generalización y evitando la sobreacumulación de regularización L2. LAMB, por su parte, fue diseñado para escalar a grandes *batch sizes*: calcula un ratio de confianza capa por capa ("layer-wise adaptive moments"), ajustando las actualizaciones de forma que cada parte de la red reciba el tamaño de paso óptimo, lo cual acelera la convergencia en conjuntos de datos extensos sin comprometer la estabilidad.
 
 Conjugar estos avances ,codificación posicional, atención multi-cabecera, arquitecturas encoder–decoder, preentrenamiento de BERT, generación autoregresiva, junto con técnicas como acumulación de gradientes, mixed-precision, entrenamiento distribuido y optimizadores especializados, permite entrenar Transformers monumentales en plazos razonables y con recursos moderados, abriendo la puerta a aplicaciones más innovadoras y escalables en el ámbito del procesamiento de lenguaje natural y más allá.
+
+#### Técnicas actuales
+
+Además de las codificaciones posicionales clásicas y las variantes de atención mencionadas, en la última generación de Transformers han surgido diversas técnicas para enriquecer la representación del orden, ampliar el contexto efectivo y dotar a los modelos de mecanismos de memoria más flexibles y escalables.
+
+**Learned positional encoding.** En lugar de emplear las fórmulas senoidales y cosenoidales fijas, se pueden parametrizar las codificaciones de posición como vectores entrenables. Cada posición $i$ dispone de un vector $P_i \in \mathbb{R}^d$ que se inicializa aleatoriamente y se ajusta durante el entrenamiento. Esta aproximación —utilizada, por ejemplo, en algunos variantes de BERT,  permite al modelo aprender directamente qué tipo de información posicional resulta más útil para la tarea concreta, sin imponer una forma matemática preconcebida.
+
+**Relative position encoding** A diferencia de las codificaciones absolutas, que asignan a cada posición de un token un identificador fijo e independiente del contexto, las codificaciones relativas buscan capturar directamente la distancia entre tokens. En lugar de codificar *dónde* se encuentra un token en una secuencia, se enfoca en *cuán lejos* está un token de otro.
+
+En la práctica, esta técnica se implementa modificando la forma en que se calcula la atención en los modelos Transformer. Se introduce un término adicional, conocido como "sesgo relativo", que depende únicamente de la diferencia entre las posiciones de los tokens que interactúan. Este sesgo puede ser un valor escalar o un vector específico para cada posible distancia relativa.
+
+La ventaja de esta aproximación es que otorga a la atención una propiedad de invarianza ante traslaciones. Es decir, si una secuencia se desplaza a otra parte del texto, el modelo puede seguir razonando sobre las relaciones internas entre tokens de forma coherente. Esto mejora significativamente la capacidad del modelo para generalizar en tareas donde lo relevante no es la posición absoluta, sino la cercanía o lejanía entre elementos del contexto.
+
+**Rotary position embedding (RoPE).** RoPE propone incorporar la información posicional directamente rotando los subespacios de la query y la key. Cada par de dimensiones $(2k,2k+1)$ de $Q$ y $K$ se rota mediante un ángulo proporcional a la posición:
+
+$$
+\begin{pmatrix}
+Q_{i,2k} \\
+Q_{i,2k+1}
+\end{pmatrix}
+\mapsto
+\begin{pmatrix}
+\cos(\theta_{i,k}) & -\sin(\theta_{i,k}) \\
+\sin(\theta_{i,k}) &  \cos(\theta_{i,k})
+\end{pmatrix}
+\begin{pmatrix}
+Q_{i,2k} \\
+Q_{i,2k+1}
+\end{pmatrix},
+$$
+
+y de igual forma para $K$. Aquí $\theta_{i,k}=i/10000^{2k/d}$. Gracias a esta rotación, las puntuaciones de atención resultan naturalmente dependientes de la diferencia de posición, sin necesidad de agregar sesgos explícitos, y facilita la extrapolación a longitudes mayores que las vistas en entrenamiento.
+
+**Extensión de contexto (Longer Context).** La capacidad de procesar secuencias muy largas es clave en aplicaciones como documentos enteros o streams de diálogo. Para superar el límite cuadrático de la atención clásica, se han desarrollado enfoques de atención dispersa (sparse), ventanas deslizantes o combinaciones jerárquicas que reducen la complejidad a casi lineal. Modelos como Longformer, BigBird o Reformer emplean patrones de atención local y global, por ejemplo, cada token atiende exhaustivamente a sus vecinos más cercanos y de forma puntual a posiciones estratégicas, lo que permite manejar decenas de miles de tokens manteniendo la calidad de la representación.
+
+**Memoria de contexto (Context Memory).** Más allá de estirar ventanas, se puede dotar al Transformer de una capa de memoria explícita. A medida que se procesa la secuencia, ciertas representaciones intermedias (por ejemplo, salidas de capas previas) se almacenan en un buffer o "memoria" externa. En procesamientos posteriores, el modelo puede leer esta memoria mediante un segundo mecanismo de atención, extendiendo su alcance efectivo a posiciones arbitrariamente distantes sin requerir re-procesar toda la secuencia origen.
+
+**Compressive Transformer.** Este diseño va un paso más allá: introduce dos niveles de memoria. Una **memoria a corto plazo** almacena representaciones recientes y se vacía continuamente, mientras una **memoria comprimida** retiene resúmenes de representaciones más antiguas. Cada vez que el buffer a corto plazo alcanza cierta longitud, sus activaciones se condensan (por ejemplo, mediante un autoencoder) y se mueven a la memoria comprimida, de la que luego pueden recuperarse mediante atención. Así se consigue un historial extenso sin explotar la memoria GPU de forma incontrolada.
+
+**Memoria externa no diferenciable.** Algunos trabajos incorporan elementos de memoria que no se entrenan de forma end-to-end por retropropagación, sino que funcionan como una base de datos de vectores a la que se consulta mediante búsquedas aproximadas (ANN). El modelo emite una query, se realiza un nearest neighbor search sobre el repositorio de memorias y se trae de vuelta la representación más similar, que luego se concatena o combina con la generación. Este enfoque, inspirado en estructuras como los Memory Networks clásicos puede aprovechar índices externos altamente optimizados.
+
+**kNN-LM (k-Nearest Neighbors Language Model).** Es una aplicación práctica de memoria externa: una vez entrenado un Transformer, se almacena cada representación de token en un datastore. Durante la generación o predicción, el modelo obtiene la distribución de probabilidad estándar y la mezcla con una distribución estimada a partir de los *k* vecinos más cercanos en el datastore, ponderados según su similitud al query actual. Este refuerzo mejora la fidelidad del modelo a datos de entrenamiento extensos y facilita la adaptación sin reentrenamiento completo.
+
+**SPALM (Sparse and Local Memory Augmented LM).** SPALM combina atención dispersa con módulos de memoria localizados: cada token sólo consulta un subconjunto de memorias cercanas y unas pocas solicitudes globales. Al mantener la mayoría de acceso al entorno inmediato y dirigir sólo una fracción de la atención a la memoria global, logra un punto de equilibrio entre capacidad de contexto extendido y eficiencia computacional.
+
+**Memorizing Transformer.** Este modelo integra un banco de memoria jerárquico y diferenciable: durante el entrenamiento, las representaciones "memorables" se extraen de la activación de ciertas neuronas y se agrupan en un diccionario de claves y valores. En inferencia, una capa de atención cruza las queries con las claves de memoria, recuperando valores asociadas que enriquecen la generación. De este modo, el modelo "memoriza" fragmentos de entrenamiento que luego puede reintroducir de forma selectiva, mejorando la consistencia y la reproducción de hechos aprendidos sin necesidad de expandir infinitamente las capas internas.
+
+En conjunto, estas innovaciones persiguen dos metas: **capturar con precisión la estructura posicional** en secuencias de longitud variable y **extender el alcance contextual** más allá de los límites físicos de la GPU. Al combinar codificaciones avanzadas (relativas, rotatorias, aprendibles) con mecanismos de memoria jerarquizados (búferes, compresión, memoria externa) y atajos de recuperación de información (kNN-LM, Memorizing Transformer, SPALM), los Transformers del futuro podrán procesar diálogos extensos, documentos enteros y flujos de datos continuos sin sacrificar eficiencia ni capacidad de generalización.
+
