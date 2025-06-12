@@ -20,6 +20,10 @@
 * Cuaderno 18: [Tecnicas de decodificacion para modelado secuencias](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Tecnicas_decodificacion_modelado_secuencias.ipynb)
 * Cuaderno 19: [Backpropagation through time (BPTT)](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/BPTT.ipynb)
 * Cuaderno 20: [Mecanismo de atención y codificación posicional](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Atencion-CodificacionPosicional.ipynb)
+* Cuaderno 21: [Transformer para traducción automática](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Transformer_traduccion.ipynb)
+* Cuaderno 22: [Transformer para clasificación]()
+* Cuaderno 23: [Preentrenamiento en BERT]()
+* Cuaderno 24: [GPT con el decodificador](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Modelo_GPT_decodificador.ipynb)
 
   
 ### Instrucciones 2025-1
