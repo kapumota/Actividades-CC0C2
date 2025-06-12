@@ -23,7 +23,7 @@
 * Cuaderno 21: [Transformer para traducción automática](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Transformer_traduccion.ipynb)
 * Cuaderno 22: [Transformer para clasificación]()
 * Cuaderno 23: [Preentrenamiento en BERT]()
-* Cuaderno 24: [GPT con el decodificador](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Modelo_GPT_decodificador.ipynb)
+* Cuaderno 24: [Modelos de lenguaje causales con el decodificador](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Modelo_GPT_decodificador.ipynb)
 
   
 ### Instrucciones 2025-1
