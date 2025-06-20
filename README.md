@@ -125,8 +125,6 @@ Después, para acceder, repites el proceso de abrir la URL con el token en el na
 - Revisa que tu Dockerfile y `requirements.txt` estén en orden y que no haya conflictos de versiones.
 - Si requieres instalar más paquetes del sistema (usando `apt-get`) o Python (usando `pip`), añádelos en el Dockerfile antes de exponer tu puerto para que queden en la imagen.
 
-
----
 #### Proyectos del curso de procesamiento de lenguaje natural CC3S2 (2024-2)
 
 ##### Lista de proyectos
