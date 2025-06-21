@@ -22,10 +22,11 @@
 * Cuaderno 20: [Mecanismo de atención y codificación posicional](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Atencion-CodificacionPosicional.ipynb)
 * Cuaderno 21: [Transformer para traducción automática](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Transformer_traduccion.ipynb)
 * Cuaderno 22: [Transformer para clasificación]()
-* Cuaderno 23: [Preentrenamiento en BERT](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Pre-entrenamiento_BERT.ipynb)
-* Cuaderno 24: [Modelos de lenguaje causales con el decodificador](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Modelo_GPT_decodificador.ipynb)
-* Cuaderno 25: [Tutorial de Hugging Face](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Tutorial-HuggingFaces.ipynb)
-* Cuaderno 26: [Ajuste fino de Transformers con PyTorch y Hugging Face](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Fine-tuning-Transformers-HuggingFace.ipynb)
+* Cuaderno 23: [Procesamiento de datos para BERT](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Preparacion_datos_BERT.ipynb)
+* Cuaderno 24: [Preentrenamiento en BERT](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Pre-entrenamiento_BERT.ipynb)
+* Cuaderno 25: [Modelos de lenguaje causales con el decodificador](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Modelo_GPT_decodificador.ipynb)
+* Cuaderno 26: [Tutorial de Hugging Face](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Tutorial-HuggingFaces.ipynb)
+* Cuaderno 27: [Ajuste fino de Transformers con PyTorch y Hugging Face](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Fine-tuning-Transformers-HuggingFace.ipynb)
 
   
 ### Instrucciones 2025-1
