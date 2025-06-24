@@ -72,9 +72,9 @@ LoRA (Low-Rank Adaptation) factoriza las actualizaciones de peso en matrices de 
 * `analysis/plots.py`: generación de gráficas que relacionan parámetros entrenados vs. accuracy para cada `r`.
 * **Vídeo de demostración**: grabación de pantalla de \~10 min mostrando
 
-  1. Inicialización del modelo con LoRA,
-  2. Ejecución de un lote de entrenamiento,
-  3. Visualización rápida de métricas en TensorBoard o consola.
+  - Inicialización del modelo con LoRA,
+  - Ejecución de un lote de entrenamiento,
+  - Visualización rápida de métricas en TensorBoard o consola.
 
 **Retos clave**
 
@@ -144,9 +144,9 @@ Más allá del entrenamiento, desplegar modelos en producción exige optimizar l
 * `server/app.py`: FastAPI con rutas documentadas y ejemplos en Swagger UI.
 * **Vídeo de demostración**: \~10 min donde se muestra:
 
-  1. Exportación a ONNX,
-  2. Ejecución de `benchmark.py`,
-  3. Llamadas a la API con `curl` o Postman.
+  - Exportación a ONNX,
+  - Ejecución de `benchmark.py`,
+  - Llamadas a la API con `curl` o Postman.
 
 **Retos clave**
 
@@ -222,7 +222,7 @@ La generación aumentada por recuperación (RAG) combina indexación de vectores
 2. Definir un módulo `RagRetriever` que reciba una consulta, recupere vectores y retorne fragmentos relevantes.
 3. Implementar un generador simple que concatene contexto + pregunta y llame a un `pipeline("text-generation")`.
 4. (Opcional) Montar un flujo de LangChain muy acotado usando `LLMChain` y un buffer de conversación ligero.
-5. Probar herramientas "mock" (p. ej. calculadora) integradas en el agente.
+5. Probar herramientas "mock" integradas en el agente.
 
 **Entregables**
 
@@ -238,8 +238,6 @@ La generación aumentada por recuperación (RAG) combina indexación de vectores
 * Manejar dependencias de FAISS en CPU sin errores de instalación.
 * Diseñar prompts modulares fácilmente extensibles.
 * Mantener un buffer de conversación ligero y persistencia mínima (p. ej. en JSON).
-
-
 
 
 
