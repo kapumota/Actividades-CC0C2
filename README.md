@@ -26,7 +26,9 @@
 * Cuaderno 24: [Preentrenamiento en BERT](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Pre-entrenamiento_BERT.ipynb)
 * Cuaderno 25: [Modelos de lenguaje causales con el decodificador](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Modelo_GPT_decodificador.ipynb)
 * Cuaderno 26: [Tutorial de Hugging Face](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Tutorial-HuggingFaces.ipynb)
-* Cuaderno 27: [Ajuste fino de Transformers con PyTorch y Hugging Face](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Fine-tuning-Transformers-HuggingFace.ipynb)
+* Cuaderno 27: [Pre-entrenamiento_LLMs_Hugging-Face.ipynb](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Pre-entrenamiento_LLMs_Hugging-Face.ipynb)
+* Cuaderno 28: [Carga de modelos e inferencia con Hugging Face](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Inferencia_HuggingFace.ipynb)
+* Cuaderno 29: [Ajuste fino de Transformers con PyTorch y Hugging Face](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Fine-tuning-Transformers-HuggingFace.ipynb)
 
   
 ### Instrucciones 2025-1
