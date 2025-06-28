@@ -33,7 +33,7 @@
 * Cuaderno 31: [Adapter en Pytorch](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Adapters_pytorch.ipynb)
 * Cuaderno 32: [RLHF - PPO]()
 * Cuaderno 33: [DPO]()
-* Cuaderno 34: [Introduccion a LangChain]()
+* Cuaderno 34: [Introduccion a LangChain](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/langchain_transformers.ipynb)
 * Cuaderno 35: [Ingeniería de prompts y evaluación de LLMs]()
 
   
