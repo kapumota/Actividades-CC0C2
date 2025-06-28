@@ -21,7 +21,7 @@
 * Cuaderno 19: [Backpropagation through time (BPTT)](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/BPTT.ipynb)
 * Cuaderno 20: [Mecanismo de atención y codificación posicional](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Atencion-CodificacionPosicional.ipynb)
 * Cuaderno 21: [Transformer para traducción automática](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Transformer_traduccion.ipynb)
-* Cuaderno 22: [Transformer para clasificación]()
+* Cuaderno 22: [Transformer para clasificación](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Transformer_clasificacion.ipynb)
 * Cuaderno 23: [Procesamiento de datos para BERT](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Preparacion_datos_BERT.ipynb)
 * Cuaderno 24: [Preentrenamiento en BERT](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Pre-entrenamiento_BERT.ipynb)
 * Cuaderno 25: [Modelos de lenguaje causales con el decodificador](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Modelo_GPT_decodificador.ipynb)
