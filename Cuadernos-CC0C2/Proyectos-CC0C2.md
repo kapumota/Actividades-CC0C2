@@ -1,4 +1,4 @@
-## Lista de proyecto del curso
+## Lista de proyectos del curso
 
 **Estructura del repositorio**: Cada estudiante debe crear un repositorio que contenga 3 carpetas principales, una para cada entrega gradual del proyecto.
 
