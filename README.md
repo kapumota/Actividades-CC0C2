@@ -29,7 +29,7 @@
 * Cuaderno 27: [Pre-entrenamiento_LLMs_Hugging-Face.ipynb](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Pre-entrenamiento_LLMs_Hugging-Face.ipynb)
 * Cuaderno 28: [Carga de modelos e inferencia con Hugging Face](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Inferencia_HuggingFace.ipynb)
 * Cuaderno 29: [Ajuste fino de Transformers con PyTorch y Hugging Face](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Fine-tuning-Transformers-HuggingFace.ipynb)
-* Cuaderno 30: [LoRA (Low-Rank Adaptation)]()
+* Cuaderno 30: [LoRA (Low-Rank Adaptation)](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/LoRA.ipynb)
 * Cuaderno 31: [Adapter en Pytorch](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Adapters_pytorch.ipynb)
 * Cuaderno 32: [RLHF - PPO]()
 * Cuaderno 33: [DPO]()
