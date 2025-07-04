@@ -22,6 +22,11 @@ Cada grupo deberá seleccionar **uno** de los siguientes proyectos. El objetivo 
 
 > Es requisito la entrega del proyecto para poder realizar la presentación. La evaluación es de tipo expositiva.
 
+**Evaluación**
+
+- Trabajo presentado: 8 puntos
+- Exposición: 12 puntos
+
 ### **Lista de proyectos a elegir**
 
 A continuación se detallan los 8 proyectos. Escoge solo uno.
