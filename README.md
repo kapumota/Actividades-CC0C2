@@ -31,10 +31,10 @@
 * Cuaderno 29: [Ajuste fino de Transformers con PyTorch y Hugging Face](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Fine-tuning-Transformers-HuggingFace.ipynb)
 * Cuaderno 30: [LoRA (Low-Rank Adaptation)](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/LoRA.ipynb)
 * Cuaderno 31: [Adapter en Pytorch](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/Adapters_pytorch.ipynb)
-* Cuaderno 32: [RLHF - PPO](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/PPO_Trainer.ipynb)
-* Cuaderno 33: [DPO](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/DPO.ipynb)
-* Cuaderno 34: [Introduccion a LangChain](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/langchain_transformers.ipynb)
-* Cuaderno 35: [Ingeniería de prompts y evaluación de LLMs]()
+* Cuaderno 32 (opcional):[Fundamentos de aprendizaje por refuerzo profundo](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/DRL.ipynb)
+* Cuaderno 33: [RLHF - PPO](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/PPO_Trainer.ipynb)
+* Cuaderno 34: [DPO](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/DPO.ipynb)
+* Cuaderno 35: [Introduccion a LangChain](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/langchain_transformers.ipynb)
 
   
 ### Instrucciones 2025-1
