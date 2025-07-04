@@ -67,7 +67,7 @@ A continuación se detallan los 8 proyectos. Escoge solo uno.
 #### **3. Adaptive attention span**
 
 * **Contexto teórico:**
-    No todas las cabeceras de atención (attention heads) en un Transformer necesitan la misma cantidad de contexto. Algunas pueden especializarse en patrones locales (sintaxis), mientras que otras pueden necesitar un contexto más amplio (semántica). El **Adaptive Attention Span** es una técnica que permite al modelo **aprender** el tamaño de contexto óptimo (el "span") para cada cabeza de atención. Esto se logra parametrizando el tamaño de la ventana de atención con un valor $\alpha_h$ para cada cabeza $h$, el cual es entrenable vía gradiente. El resultado es un modelo más eficiente y, a menudo, más interpretable.
+    No todas las cabeceras de atención (attention heads) en un Transformer necesitan la misma cantidad de contexto. Algunas pueden especializarse en patrones locales (sintaxis), mientras que otras pueden necesitar un contexto más amplio (semántica). El **Adaptive Attention Span** es una técnica que permite al modelo **aprender** el tamaño de contexto óptimo (el "span") para cada cabecera de atención. Esto se logra parametrizando el tamaño de la ventana de atención con un valor $\alpha_h$ para cada cabecera $h$, el cual es entrenable vía gradiente. El resultado es un modelo más eficiente y, a menudo, más interpretable.
 
 * **Objetivos específicos:**
     -  Implementar una capa de atención donde el tamaño de la ventana de atención no es fijo, sino un parámetro aprendible.
@@ -75,7 +75,7 @@ A continuación se detallan los 8 proyectos. Escoge solo uno.
     -  Visualizar cómo diferentes cabeceras aprenden diferentes spans a lo largo del entrenamiento.
 
 * **Entregables clave:**
-    * **Gráficos de spans:** Un gráfico de barras o un mapa de calor que muestre el valor final del "span" aprendido por cada cabeza de atención en cada capa del Transformer.
+    * **Gráficos de spans:** Un gráfico de barras o un mapa de calor que muestre el valor final del "span" aprendido por cada cabecera de atención en cada capa del Transformer.
     * **Análisis calidad vs. span:** Un análisis que discuta la relación entre el span promedio aprendido y la calidad final del modelo (PPL). ¿Se puede lograr un rendimiento similar con un contexto significativamente reducido?
 
 
