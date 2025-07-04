@@ -58,7 +58,7 @@ LoRA (Low-Rank Adaptation) factoriza las actualizaciones de peso en matrices de 
 **Objetivos**
 
 1. Crear un módulo `LoRALinear` que sustituya/rode las capas lineales estándar, inyectando matrices `A` (d×r) y `B` (r×k).
-2. Desarrollar `LoRAAttention` extendiendo el mecanismo de atención multi-cabeza para incorporar LoRA en las proyecciones Q/K/V y la salida.
+2. Desarrollar `LoRAAttention` extendiendo el mecanismo de atención multi-cabecera para incorporar LoRA en las proyecciones Q/K/V y la salida.
 3. Garantizar que el `state_dict` permita separar y combinar los pesos base y los adaptadores LoRA, y soportar guardado/recarga con `merge_weights=True/False`.
 4. Experimentar con distintos rangos `r` (por ejemplo, 4, 16, 64) y tasas de aprendizaje diferenciadas para A y B.
 5. (Opcional) Integrar un simple esquema de pruning y cuantización usando operaciones nativas de PyTorch.
