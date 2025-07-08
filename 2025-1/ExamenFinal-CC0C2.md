@@ -125,10 +125,10 @@ proyectoX/                    <- Raíz del repositorio
 * **Página inicial**: Título, autor, fecha y objetivos del proyecto.
 * **Secciones mínimas**:
 
-  1. **Introducción**: Motivación y contexto teórico.
-  2. **Implementación**: Fragmentos de código clave (no todo).
-  3. **Resultados**: Gráficos generados con Matplotlib (sin especificar colores).
-  4. **Análisis**: Breve interpretación de las curvas o tablas.
+  * **Introducción**: Motivación y contexto teórico.
+  * **Implementación**: Fragmentos de código clave (no todo).
+  * **Resultados**: Gráficos generados con Matplotlib (sin especificar colores).
+  * **Análisis**: Breve interpretación de las curvas o tablas.
 * **Buenas prácticas**:
 
   * Evitar celdas de instalación (`%pip install`).
@@ -239,9 +239,9 @@ proyecto1_seq2seq/
 
 * Script `run_bench.sh` que:
 
-  1. Activa entorno VirtualEnv.
-  2. Ejecuta `bench_translation.py`.
-  3. Guarda resultados en `benchmarks/results/`.
+  * Activa entorno VirtualEnv.
+  * Ejecuta `bench_translation.py`.
+  * Guarda resultados en `benchmarks/results/`.
 * Notebook `notebook_bench.ipynb` con visualizaciones:
 
   * BLEU vs latencia (línea).
