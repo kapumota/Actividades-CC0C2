@@ -1,5 +1,110 @@
 ### **Examen Final CC0C2**
 
+
+### **Proyectos**
+
+#### **1. Decodificadores avanzados para modelos Seq2Seq**
+
+**Tema central**
+Comparar *greedy*, *beam search*, *top-k*, *top-p* y *diverse-beam* en un Transformer de traducción EN -> ES.
+
+**Entregables clave**
+
+* Implementaciones modulares de 5 decodificadores
+* Script de benchmarking con BLEU, tiempo y memoria
+* Pruebas unitarias de cada decodificador y de generación determinista con `seed`.
+* Cuaderno: gráfico de calidad vs latencia y tabla comparativa.
+
+**Datasets sugeridos:** Tatoeba subset (≈100 k pares) o Hugging Face `opus_books`.
+
+
+#### 2. Clasificación multietiqueta con BERT + LoRA
+
+**Tema central**
+Fine-tuning eficiente (LoRA) de un modelo BERT multilingüe para etiquetar temas en noticias en español.
+
+**Entregables clave**
+
+* Carga y preprocesamiento de `es_dataset`.
+* Implementación de LoRA *from scratch* (sin lib externa) y rutina de entrenamiento.
+* Suite de pruebas: convergencia, shapes y sobreajuste controlado.
+* Benchmarks contra fine-tuning completo (F1, tiempo, VRAM).
+
+
+#### 3. Pre-entrenamiento de un mini-BERT desde cero
+
+**Tema central**
+Entrenar un modelo tipo BERT-Base (12 capas) sobre un corpus propio de Wikipedia en español (\~250 MB) con MLM + NSP.
+
+**Entregables clave**
+
+* Tokenizador SentencePiece + generador TFRecord/Parquet.
+* Modelo BERT + entrenamiento distribuido con `torch.distributed` o `Accelerate`.
+* Benchmarks de *loss* frente a pasos, uso de GPU y throughput.
+* Pruebas: máscara correcta, doble pérdida, carga/checkpoint.
+
+
+#### 4. GPT-Decoder + RLHF para resúmenes
+
+**Tema central**
+Construir un GPT pequeño (6 capas) y afinarlo con PPO para resumir artículos científicos.
+
+**Entregables clave**
+
+* Implementación completa de GPT causal con atención enmascarada.
+* Pipeline `trl`-like de PPO con recompensa Rouge-L.
+* Benchmarks antes/después de RLHF; curva de estabilidad.
+* Pruebas: máscara causal, gradiente/π θ  vs π ref.
+
+#### 5. Atención y codificación posicional comparativa
+
+**Tema central**
+Evaluar Sinusoidal, Aprendida, RoPE y ALiBi en un Transformer pequeño de lenguaje español.
+
+**Entregables clave**
+
+* Cuatro módulos de codificación posicional intercambiables.
+* Rutina de entrenamiento y script de *ablation*.
+* Benchmark: perplexity y velocidad en secuencias 128->1 k.
+* Pruebas: igualdad de dimensiones, invariancia a *batch-size*.
+
+#### 6. Traducción EN↔ES con LoRA vs Adapters vs Fine-tune Completo
+
+**Tema central**
+Comparar tres técnicas de ajuste de parámetros con un modelo T5-Small.
+
+**Entregables clave**
+
+* Implementación propia de *Adapters* (bottleneck) e integración LoRA.
+* Script multi-experimento con evaluación BLEU/COMET.
+* Benchmarks de VRAM, tiempo y calidad.
+* Tests: carga y congelación correcta de pesos base.
+
+#### 7. Servicio de inferencia optimizada con cuantización
+
+**Tema central**
+Desplegar un endpoint FastAPI que sirva un modelo GPT-J cuantizado (8/4 bits) con *batching* dinámico y métricas de throughput.
+
+**Entregables clave**
+
+* Pipeline de cuantización (bitsandbytes/ggml) y validación de precisión.
+* Servidor FastAPI + cola de peticiones asíncronas.
+* Benchmarks locust/ab - latencia P50/P95.
+* Pruebas de contrato (status 200, tiempo < X ms).
+
+#### 8. RAG con LangChain + VectorStore
+
+**Tema central**
+Construir un sistema de Preguntas-Respuestas sobre documentación técnica usando recuperación FAISS + generación GPT-NeoX.
+
+**Entregables clave**
+
+* Ingesta de PDF/Markdown, división y embeddings.
+* Cadena LangChain con *Retriever* + *LLM* + *Prompt* modular.
+* Benchmarks: exactitud vs tamaño del contexto, tiempo de respuesta.
+* Pruebas: recuperación top-k, formato de respuesta, tiempo < 2 s para k = 5.
+
+
 #### **1. Requisitos generales comunes**
 
 Todos los proyectos comparten una serie de **condiciones y pautas** obligatorias:
@@ -104,7 +209,7 @@ proyectoX/                    <- Raíz del repositorio
 * **Tipos de prueba**:
 
   * *Unitarias* para funciones puras (p. ej. cálculo de máscara causal).
-  * *Integración* para flujos completos (p. ej. paso de datos → modelo → métrica).
+  * *Integración* para flujos completos (p. ej. paso de datos -> modelo -> métrica).
 * **Fixtures**: Uso de `@pytest.fixture` para crear datos dummy o modelos ligeros en memoria.
 
 **2.3. `benchmarks/`**
@@ -153,7 +258,8 @@ Debe contener:
 * **Licencia** y **autor**.
 
 
-#### **3. Detalles de cada proyecto**
+
+#### **4. Detalles de cada proyecto**
 
 A continuación se amplía el **Proyecto 1** como ejemplo detallado de cómo deben planificarse las ocho propuestas. Para los demás, se seguirá un patrón similar, adaptando los módulos y métricas.
 
