@@ -404,13 +404,6 @@ Para los proyectos 2 a 8, **repite el mismo nivel de detalle**:
   * Comentarios concisos en español, explicando "por qué" además de "qué".
 
 
-#### **6. Consejos para maximizar la nota**
-
-1. **Pruebas exhaustivas**: Cubre casos límite (oraciones vacías, secuencias muy largas, tamaños de batch variables).
-2. **Benchmarks claros**: Presenta tablas resumidas en el cuaderno y exporta resultados completos en CSV.
-3. **Exposición pulida**: El video debe fluir como una charla técnica, con transiciones suaves entre teoría, código y demos.
-4. **Defensa preparada**: Conoce a fondo cada decisión de diseño y los trade-offs (p. ej. ¿por qué elegir ALiBi sobre sinusoidal?).
-
 > **Resultado esperado:** Un repositorio organizado, reproducible y documentado, con implementaciones limpias y modulares, pruebas sólidas y análisis de rendimiento transparente. Con ello, superarás las expectativas del curso y asegurarás una evaluación óptima.
 
 #### **Evaluación**
@@ -421,3 +414,49 @@ Para los proyectos 2 a 8, **repite el mismo nivel de detalle**:
 | Video de presentación (> 10 min, audio) |   6  | Explicación clara de motivación, diseño, demo de resultados, uso de conceptos. **Audio obligatorio**.                 |
 | Ronda de preguntas en clase            |   10   | Defensa individual: dominio teórico, implementación, análisis de resultados y preguntas durante la sesión oral.            |
 
+
+**Penalizaciones** aplicables a todo el proyecto
+
+* **Historial de Git insuficiente o irregular**:
+
+  * Se exige un mínimo de 3 commits por módulo, con mensajes en español que comiencen con un verbo ("Añade...", "Corrige...").
+  * Cualquier commit único que introduzca más várias líneas de golpe (mayor a 50) se penalizará con -1 punto en el total de la evaluación.
+
+* **README incompleto o mal estructurado**:
+
+  * Debe incluir descripción de carpetas (`src/`, `tests/`, `benchmarks/`, `exposicion.ipynb`), pasos de instalación, ejecución de pruebas, benchmarks, y enlace al video.
+  * La ausencia de uno solo de estos apartados conlleva 4 puntos en el total de la evaluación.
+
+* **Búsqueda de "fingerprints" de LLM**:
+
+  * Comentarios o cadenas con comillas tipográficas (" "), guiones largos (—) o puntos suspensivos unicode o íconos serán penalizados con -6 puntos en la evaluación total.
+
+* **Detección de lenguaje en comentarios y cadenas**:
+
+  * Si más del 5 % de tokens en comentarios o strings están en inglés (según detector de idioma), se aplica -1 punto.
+  * Uso de términos prohibidos (`TODO`, `fixme`, `test` en contexto no válido) acarrea -1 punto adicional.
+
+* **Análisis de estilo de código**:
+
+  * Cualquier error grave de linting (`flake8 --select=E9,W6,C4`) restará 0.5 puntos por error hasta un máximo de -3 puntos.
+  * Docstrings en inglés o sin seguir el formato requerido (Google/NumPy) supondrán -1 punto en el total de la evaluación.
+
+* **Check de tags Git**:
+
+  * La entrega final debe estar marcada con un tag `v<entrega>` (p.ej. `v1.0-entrega`).
+  * Si falta el tag o está malformado, se descontarán 2 puntos en el total de la evaluación.
+
+* **Timestamps inconsistentes**:
+
+  * Si la fecha de creación o modificación de archivos difiere en más de 1 hora entre sí, se considerará indicio de copia y se restarán 2 puntos del total de la evaluación.
+
+* **Inclusión de Github Actions** 
+  En tu repositorio un archivo de GitHub Actions bajo `.github/workflows/ci.yml` que automatice los siguientes controles en cada push o pull request:
+
+  - Ejecución de linters (`flake8 --select=E9,W6,C4`) para detectar errores graves de estilo y calidad de código.
+  - Búsqueda de caracteres tipográficos no ASCII (comillas “ ”, guiones largos —, puntos suspensivos …) y fallo si se encuentran.
+  - Detector de idioma que verifique que menos del 5 % de los comentarios o cadenas estén en inglés.
+  - Comprobación de que el commit actual esté etiquetado con `v<entrega>` (por ejemplo `v1.0-entrega`).
+  - Verificación de que las marcas de tiempo de los archivos no difieran en más de una hora (indicando posibles copias de otros proyectos).
+
+Este workflow garantiza el control automático de calidad, estilo y autenticidad de cada entrega. Menos 5 puntos si no se presenta en la evaluación final.
