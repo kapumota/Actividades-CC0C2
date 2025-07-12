@@ -418,6 +418,6 @@ Para los proyectos 2 a 8, **repite el mismo nivel de detalle**:
 | Criterio                               | Puntos | Descripción                                                                                                     |
 | -------------------------------------- | :----: | --------------------------------------------------------------------------------------------------------------- |
 | Trabajo en el repositorio              |    4   | Incluye `src, `tests/`, `benchmarks/` y un cuaderno de  `exposicion.ipynb` en español, sin símbolos extra. |
-| Video de presentación (> 10 min, audio) |   6  | Explicación clara de motivación, diseño, demo de resultados, uso de conceptos **audio obligatorio**.                 |
+| Video de presentación (> 10 min, audio) |   6  | Explicación clara de motivación, diseño, demo de resultados, uso de conceptos. **Audio obligatorio**.                 |
 | Ronda de preguntas en clase            |   10   | Defensa individual: dominio teórico, implementación, análisis de resultados y preguntas durante la sesión oral.            |
 
