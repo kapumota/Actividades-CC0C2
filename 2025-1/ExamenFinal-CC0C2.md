@@ -59,7 +59,7 @@ Construir un GPT pequeño (6 capas) y afinarlo con PPO para resumir artículos c
 #### 5. Atención y codificación posicional comparativa
 
 **Tema central**
-Evaluar Sinusoidal, Aprendida, RoPE y ALiBi en un Transformer pequeño de lenguaje español.
+Evaluar codificación sinusoidal, RoPE y ALiBi en un Transformer pequeño de lenguaje español.
 
 **Entregables clave**
 
@@ -68,7 +68,7 @@ Evaluar Sinusoidal, Aprendida, RoPE y ALiBi en un Transformer pequeño de lengua
 * Benchmark: perplexity y velocidad en secuencias 128->1 k.
 * Pruebas: igualdad de dimensiones, invariancia a *batch-size*.
 
-#### 6. Traducción EN↔ES con LoRA vs Adapters vs Fine-tune Completo
+#### 6. Traducción EN<->ES con LoRA vs Adapters vs Fine-tune Completo
 
 **Tema central**
 Comparar tres técnicas de ajuste de parámetros con un modelo T5-Small.
