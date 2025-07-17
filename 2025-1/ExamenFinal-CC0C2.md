@@ -460,3 +460,43 @@ Para los proyectos 2 a 8, **repite el mismo nivel de detalle**:
   - Verificación de que las marcas de tiempo de los archivos no difieran en más de una hora (indicando posibles copias de otros proyectos).
 
 Este workflow garantiza el control automático de calidad, estilo y autenticidad de cada entrega. Menos 5 puntos si no se presenta en la evaluación final.
+
+#### **Normas de exposición oral (5 min + preguntas)**
+
+1. **Duración**  
+   - Cada estudiante dispondrá de entre **5 a 10 minutos** para presentar su proyecto.  
+   - Se medirá el tiempo y, al cumplirse se interrumpirá la exposición si es necesario.
+
+2. **Estructura de la presentación**  
+   - **Introducción (1 min)**  
+      - Objetivo y motivación del proyecto.  
+      - Contexto breve y relevancia.  
+   - **Desarrollo y resultados (3 min)**  
+      - Arquitectura o algoritmos clave.  
+      - Principales hitos conseguidos y métricas obtenidas.  
+      - Menciones de partes aún en desarrollo o mejoras pendientes.  
+   - **Conclusiones y próximos pasos (1 min)**  
+      - Reflexión sobre limitaciones.  
+      - Plan de trabajo para completar las partes faltantes.
+
+3. **Material de apoyo**  
+   - Se podrá mostrar **1.2** diapositivas o fragmentos de código muy breves.  
+   - No se permite lectura de párrafos extensos: deben usarse viñetas o gráficos.  
+   - Opcional: un único diagrama de arquitectura o flujo de datos.
+
+4. **Interacción con el docente (Preguntas)**  
+   - Tras la exposición, el docente formulará **4-5 preguntas** en un máximo de **30 minutos adicionales**.  
+   - Los estudiantes deben responder de forma concisa, demostrando comprensión teórica y práctica.  
+   - Las preguntas cubrirán:  
+     - Fundamentos teóricos del método.  
+     - Decisiones de diseño e implementación.  
+     - Análisis de resultados y benchmarks.
+     - Fundamentos del curso
+
+5. **Criterios de evaluación**  
+   - **Claridad** (0-2 pts): estructura, uso de lenguaje técnico preciso.  
+   - **Dominio** (0-3 pts): respuestas a preguntas, profundidad en explicaciones.  
+   - **Resultados** (0-2 pts): presentación de métricas y hallazgos.  
+   - **Proyección** (0-1 pt): identificación de trabajos pendientes y mejora continua.
+
+> **Total exposición oral:** 10 puntos
