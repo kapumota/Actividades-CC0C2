@@ -35,6 +35,8 @@
 * Cuaderno 33: [RLHF - PPO](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/PPO_Trainer.ipynb)
 * Cuaderno 34: [DPO](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/DPO.ipynb)
 * Cuaderno 35: [Introduccion a LangChain](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/langchain_transformers.ipynb)
+* Cuaderno 36: [LlamaIndex y RAG]()
+* Cuaderno 37: [Agentes de inteligencia artificial]()
 
   
 ### Instrucciones 2025-1
