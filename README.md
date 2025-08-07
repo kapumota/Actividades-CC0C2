@@ -37,6 +37,7 @@
 * Cuaderno 35: [Introduccion a LangChain](https://github.com/kapumota/Actividades-CC0C2/blob/main/2025-1/langchain_transformers.ipynb)
 * Cuaderno 36: [LlamaIndex y RAG]()
 * Cuaderno 37: [Agentes de inteligencia artificial]()
+* Cuaderno 38: [Ingeniería de Prompts]()
 
   
 ### Instrucciones 2025-1
